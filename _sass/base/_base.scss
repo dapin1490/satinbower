@@ -481,3 +481,51 @@ mjx-container {
     margin-top: 3rem;
   }
 }
+
+/* customs begin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #669966;
+}
+
+.x-understand {
+  color: #ccb833;
+}
+
+.understand {
+  color: #0099ff;
+}
+
+.tab {
+  white-space: pre;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.cancle {
+  text-decoration: line-through;
+}
+
+.green {
+  color: #339966;
+}
+
+.grey {
+  color: #7f7f7f;
+}
+
+code.language-plaintext.highlighter-rouge {
+  font-family: v.$font-family-codeblock;
+}
+
+div.highlighter-rouge {
+  font-family: v.$font-family-codeblock;
+}
+
+/* customs end */

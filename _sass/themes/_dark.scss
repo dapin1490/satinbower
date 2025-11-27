@@ -2,7 +2,7 @@
   color-scheme: dark;
 
   /* Framework color */
-  --main-bg: rgb(27 27 30);
+  --main-bg: rgb(27 27 30); // #1B1B1E
   --mask-bg: rgb(68 69 70);
   --main-border-color: rgb(44 45 45);
 
@@ -10,7 +10,7 @@
   --text-color: rgb(175 176 177);
   --text-muted-color: #868686;
   --text-muted-highlight-color: #aeaeae;
-  --heading-color: #cccccc;
+  --heading-color: #84b2fd; // custom
   --label-color: #a7a7a7;
   --blockquote-border-color: rgb(66 66 66);
   --blockquote-text-color: #868686;
@@ -34,7 +34,7 @@
   /* Sidebar */
   --site-title-color: #717070;
   --site-subtitle-color: #868686;
-  --sidebar-bg: #1e1e1e;
+  --sidebar-bg: #1e2026;
   --sidebar-border-color: #292929;
   --sidebar-muted-color: #868686;
   --sidebar-active-color: rgb(255 255 255 / 95%);
