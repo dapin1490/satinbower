@@ -5,6 +5,7 @@ date: 2024-00-00 00:00:00 +09:00
 categories: [IT, note]
 tags: [지식, IT]
 render_with_liquid: false
+use_math: true
 ---
 
 <style>
