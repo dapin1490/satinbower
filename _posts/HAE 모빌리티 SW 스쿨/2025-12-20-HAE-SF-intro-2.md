@@ -12,7 +12,7 @@ use_math: true
   figure { text-align: center; }
 </style>
 
-## ToC
+### table of contents
 - [QnA](#qna)
 - [M5. 데이터 연결](#m5-데이터-연결)
   - [데이터 수집](#데이터-수집)
@@ -159,7 +159,7 @@ use_math: true
                 - $X_2^L \leq X_2 \leq X_2^U$
                 - $Time \ Fn \sim y$
                 - $Cost \ Fn \sim y$
-                이런 상황에서 최적의 X를 찾아내는 걸 하라는 말임. 최적 설비 파라미터는 $X^* = \{ x_1^*, x_2^* \}$로 나타낸다.
+                이런 상황에서 최적의 X를 찾아내는 걸 하라는 말임. 최적 설비 파라미터는 $X^\star = \{ x_1^\star, x_2^\star \}$로 나타낸다.
 
 ---
 

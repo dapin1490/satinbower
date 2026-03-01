@@ -11,7 +11,7 @@ render_with_liquid: false
   figure { text-align: center; }
 </style>
 
-### ToC
+### table of contents
 - [QnA](#qna)
 - [개요](#개요)
 - [M1. 스마트 팩토리](#m1-스마트-팩토리)
