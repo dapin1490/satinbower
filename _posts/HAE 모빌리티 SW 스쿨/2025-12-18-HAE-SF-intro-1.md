@@ -88,10 +88,10 @@ HMG 스마트 팩토리 홍보영상 봤음. 사람 별로 없고요 죄다 로�
         3. 고로 생산량은 똑같이, 각 고객에게 맞춰서 만들어줘야 돈이 된다
     - 예전엔 사람이 ‘차량을 생산하는’ 프로그램을 만들었지만 위와 같은 사유로 더이상 그것은 현실적인 업무 방식이 아니게 됨. 이제 사람이 만들어야 할 것은 ‘차량을 생산하는 프로그램을 만드는 프로그램’임. 사람은 만들어진 프로그램을 검수함.  
         근데 이 기존 인력들을 다 버릴 수는 없으니 다시 교육해서 새 프로그램을 만들게 하는 거임.
-    - 교재 13페이지 <제조 지능화> 도식 참고
+    - 교재 13페이지 \<제조 지능화> 도식 참고
         <figure style="text-align: center;">
-        	<a href="https://ksp.etri.re.kr/ksp/plan-report/file/638.pdf" target="_blank"><img src="\assets\img\category-HAE\251218-HAE-2-SF-intro-1-1.png" alt="스마트공장 개념도"></a>
-        	<figcaption>제조 지능화</figcaption>
+        <a href="https://ksp.etri.re.kr/ksp/plan-report/file/638.pdf" target="_blank"><img src="/assets/img/category-HAE/251218-HAE-2-SF-intro-1-1.png" alt="스마트공장 개념도"></a>
+        <figcaption>제조 지능화</figcaption>
         </figure>
     - 지능화 vs 자율화
         - 지능화: 의사결정까지는 하는데, 실행권은 없음
