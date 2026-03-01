@@ -15,7 +15,7 @@ render_with_liquid: false
 11월 대학 비교과 프로그램 온라인 건강교육의 내용을 정리한 것이다. 첨부된 이미지 자료의 출처는 모두 이 강의이다.  
   
 ## 튜빙밴드
-구매처 추천 : <http://melkinsports.com/category/%ED%8A%9C%EB%B9%99%EB%B0%B4%EB%93%9C/246/>  
+구매처 추천 : <https://melkinsports.com/category/%ED%8A%9C%EB%B9%99%EB%B0%B4%EB%93%9C/246/>  
   
 ## 운동 프로그램 예시
 - 초보자  

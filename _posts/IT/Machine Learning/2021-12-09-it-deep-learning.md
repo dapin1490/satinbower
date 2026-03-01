@@ -100,10 +100,10 @@ render_with_liquid: false
    
 **\* 참고문헌**   
 - 인공지능(이 과제가 출제된 강의임) 강의 자료
-- “MYCIN” AI Study [http://www.aistudy.co.kr/demo/MYCIN.htm](http://www.aistudy.co.kr/demo/MYCIN.htm)
+- “MYCIN” AI Study [https://www.aistudy.co.kr/demo/MYCIN.htm](https://www.aistudy.co.kr/demo/MYCIN.htm)
 - “Intelligent Agents” STUDYLIB [https://studylib.net/doc/9074467/intelligent-agents](https://studylib.net/doc/9074467/intelligent-agents)
 - “지능형 에이전트” 위키백과, 우리 모두의 백과사전. [https://ko.wikipedia.org/wiki/지능형_에이전트](https://ko.wikipedia.org/wiki/%EC%A7%80%EB%8A%A5%ED%98%95_%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8)
-- “유전자 알고리즘 : 정환묵” AI Study [http://www.aistudy.co.kr/biology/genetic/genetic_jeong.htm](http://www.aistudy.co.kr/biology/genetic/genetic_jeong.htm)
+- “유전자 알고리즘 : 정환묵” AI Study [https://www.aistudy.co.kr/biology/genetic/genetic_jeong.htm](https://www.aistudy.co.kr/biology/genetic/genetic_jeong.htm)
 - “연결주의” 위키백과, 우리 모두의 백과사전. [https://ko.wikipedia.org/wiki/연결주의](https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B2%B0%EC%A3%BC%EC%9D%98)
 - “딥 러닝이란 무엇인가요?” Basler [https://www.baslerweb.com/ko/vision-campus/markets-and-applications/what-is-deep-learning/](https://www.baslerweb.com/ko/vision-campus/markets-and-applications/what-is-deep-learning/)
 - “딥 러닝” 위키백과, 우리 모두의 백과사전. [https://ko.wikipedia.org/wiki/딥_러닝](https://ko.wikipedia.org/wiki/%EB%94%A5_%EB%9F%AC%EB%8B%9D)
@@ -111,9 +111,9 @@ render_with_liquid: false
 - “인공 신경망” 위키백과, 우리 모두의 백과사전. [https://ko.wikipedia.org/wiki/인공_신경망](https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5_%EC%8B%A0%EA%B2%BD%EB%A7%9D)
 - “합성곱 신경망” 위키백과, 우리 모두의 백과사전. [https://ko.wikipedia.org/wiki/합성곱_신경망](https://ko.wikipedia.org/wiki/%ED%95%A9%EC%84%B1%EA%B3%B1_%EC%8B%A0%EA%B2%BD%EB%A7%9D)
 - “딥 러닝을 이용한 자연어 처리 입문” WikiDocs [https://wikidocs.net/book/2155](https://wikidocs.net/book/2155)
-- “넷마블 '콜롬버스·마젤란' 프로젝트 아시나요” BUSINESS WATCH [http://news.bizwatch.co.kr/article/mobile/2020/10/30/0021](http://news.bizwatch.co.kr/article/mobile/2020/10/30/0021)
+- “넷마블 '콜롬버스·마젤란' 프로젝트 아시나요” BUSINESS WATCH [https://news.bizwatch.co.kr/article/mobile/2020/10/30/0021](https://news.bizwatch.co.kr/article/mobile/2020/10/30/0021)
 - “블레이드&소울, ‘무한의 탑’ 업데이트…강력한 AI NPC 등장” smartPC사랑 [https://www.ilovepc.co.kr/news/articleView.html?idxno=12283](https://www.ilovepc.co.kr/news/articleView.html?idxno=12283)
-- “[AI 리뷰] 인공지능을 통해 게임 플레이 에이전트를 빠르게 학습하고, 배포할 수 있는 솔루션 오픈소스로 공개” 인공지능신문 [http://www.aitimes.kr/news/articleView.html?idxno=21550](http://www.aitimes.kr/news/articleView.html?idxno=21550)
+- “[AI 리뷰] 인공지능을 통해 게임 플레이 에이전트를 빠르게 학습하고, 배포할 수 있는 솔루션 오픈소스로 공개” 인공지능신문 [https://www.aitimes.kr/news/articleView.html?idxno=21550](https://www.aitimes.kr/news/articleView.html?idxno=21550)
 - “BARO AI Academy“ facebook [https://pixel.facebook.com/baro.aiacademy/posts/382616146530069](https://pixel.facebook.com/baro.aiacademy/posts/382616146530069)
 - ”알파고“ 위키백과, 우리 모두의 백과사전. [https://ko.wikipedia.org/wiki/알파고](https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C%EA%B3%A0)
    

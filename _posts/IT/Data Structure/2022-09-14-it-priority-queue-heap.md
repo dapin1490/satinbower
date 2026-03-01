@@ -240,7 +240,7 @@ priority_queue<string> copy_words {words}; // words의 복제본
 4. [priority_queue 사용법](https://dolphins-it.tistory.com/43)  
 5. [C++14 STL 철저 입문 - 3.4 &#124; priority_queue&lt;T&gt; 컨테이너 어댑터 사용하기](https://thebook.io/006842/ch03/04/)  
 6. [C++/STL 강좌 2편. 함수 객체(Function Object)](https://blog.hexabrain.net/267)  
-7. [72) 함수 객체 - 코딩의 시작, TCP School](http://www.tcpschool.com/cpp/cpp_algorithm_functor)  
+7. [72) 함수 객체 - 코딩의 시작, TCP School](https://www.tcpschool.com/cpp/cpp_algorithm_functor)  
 8. [[자료구조] 힙(heap)이란](https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html)  
 9. [객체 생성시 괄호와 중괄호의 구분](https://infoscoco.com/17)  
 10. [[Modern C++]Initializer_list](https://haedallog.tistory.com/8)  
