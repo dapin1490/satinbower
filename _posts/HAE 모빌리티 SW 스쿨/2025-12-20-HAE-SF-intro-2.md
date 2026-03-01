@@ -5,6 +5,7 @@ date: 2025-12-20 18:00:00 +09:00
 categories: [HAE, note]
 tags: [현대오토에버, 모빌리티, 스마트팩토리, 인공지능, 탐색적 데이터 분석]
 render_with_liquid: false
+use_math: true
 ---
 
 <style>
