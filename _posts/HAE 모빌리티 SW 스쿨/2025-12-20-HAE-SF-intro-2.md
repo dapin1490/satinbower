@@ -394,7 +394,6 @@ use_math: true
         
     - data.describe()
         
-        
         |       | Index       | Date        | LoT         | DateTime            | pH          | Temperature | ProcessRate | pH_Standard  | Temperature_Standard | ProcessRate_Standard |
         | ----- | ----------- | ----------- | ----------- | ------------------- | ----------- | ----------- | ----------- | ------------ | -------------------- | -------------------- |
         | count | 50094       | 50094       | 50094       | 50094               | 50094       | 50094       | 50094       | 50094        | 50094                | 50094                |
@@ -412,10 +411,10 @@ use_math: true
         - 수율은 80~98 정도
 - 그래프 아무거나 그려보기
     1. pH와 온도의 조합별 수율 확인하기  
-        ![](https://velog.velcdn.com/images/dapin1490/post/efba099f-5485-4764-b2e4-63dcd6e9ac2f/image.png)  
+        ![](/assets/img/category-HAE/251218-HAE-4-SF-intro-2-1.png)  
         pH(x축)는 전체 범위에 걸쳐 수율이 괜찮은 반면 온도(y축)는 위와 아래의 수율에 차이가 있다 ⇒ 온도가 문제일 수도 있다  
     2. 일일 lot별 변화 그래프  
-        ![](https://velog.velcdn.com/images/dapin1490/post/4b3cf73e-cc53-4d61-9d57-3a36a330cbb8/image.jpg)  
+        ![](/assets/img/category-HAE/251218-HAE-5-SF-intro-2-2.jpg)  
         ⇒ 온도가 수율에 더 영향을 주고 있다  
         → 온도는 산성 용액의 반응으로 발생하는 반응열에 의해 정해지며,  
         일반적으로 온도가 높을 경우 화학 반응이 촉진됨  
@@ -423,20 +422,19 @@ use_math: true
         → 처음과 끝에는 화학 반응이 원활하지 않았다  
         → 어떻게 하면 시작부터 반응을 원활하게 하고, 끝까지 원활하게 할 것인가?  
     3. 수율과 온도의 관계 좀 더 확인하기  
-        ![](https://velog.velcdn.com/images/dapin1490/post/b4e8a077-c24b-479e-b216-1617e633a9b3/image.jpg)  
+        ![](/assets/img/category-HAE/251218-HAE-6-SF-intro-2-3.png)  
         일일 평균 데이터로 온도별 수율 그래프를 보면 확실히 온도가 낮을 때 수율도 낮다  
-        ![](https://velog.velcdn.com/images/dapin1490/post/e9c7d93a-5402-4008-90c7-b7be3ffbc4c2/image.jpg)  
+        ![](/assets/img/category-HAE/251218-HAE-7-SF-intro-2-4.png)
         다만 평균이 아닌 전체 데이터로 똑같이 그려보면 ‘온도가 낮으면 수율이 낮을 것이다’에 해당하지 않는 샘플도 꽤 있음  
-        ![](https://velog.velcdn.com/images/dapin1490/post/ef38c708-33cd-454c-a629-6b4cf95dd8b9/image.jpg)  
+        ![](/assets/img/category-HAE/251218-HAE-8-SF-intro-2-5.png)  
         다시 봐도 이상치가 있음 → 이건 pH가 뭔가 했다. 이전엔 일일 평균 데이터로 온도-pH-수율 그래프를 그렸지만 거기선 보이지 않았기 때문에 전체 데이터로 다시 그려볼 필요가 있다.  
     4. 전체 데이터로 온도-pH-수율 그래프 다시 그리기 (온도와 pH가 각각 축이고 수율이 점 크기)  
-        ![](https://velog.velcdn.com/images/dapin1490/post/8d5cc996-1ae3-45d6-af01-7a46781c6552/image.jpg)  
+        ![](/assets/img/category-HAE/251218-HAE-9-SF-intro-2-6.png)  
         다시 보니까 pH와 온도의 관계는 명확한데, pH가 3.0을 넘어가는 순간 분포가 달라짐  
     5. 결론  
         - pH 정상(3.0 이하), 온도 낮음(45 미만) → 수율 하락  
         - pH 너무 높음(3.0 이상) → 수율 불안정  
         ⇒ 두 인사이트는 pH 3.0 이상, 온도 45 미만이라는 공통적인 특성으로 정리됨
-        
 
 ## 모델 만들기
 
@@ -514,10 +512,10 @@ use_math: true
         - R² 차이: 0.0188
 - 모델 예측 결과
     
-    ![](https://velog.velcdn.com/images/dapin1490/post/ca8ef77d-78f8-4718-b787-243ced985a33/image.png)
-    ![](https://velog.velcdn.com/images/dapin1490/post/9b22f6d8-9b64-4ec5-b4c8-1657127e26d1/image.png)
-    ![](https://velog.velcdn.com/images/dapin1490/post/2cb57aaa-e689-4f90-8cac-a1eaf60a7d49/image.png)
-    ![](https://velog.velcdn.com/images/dapin1490/post/3d7c3e8a-430a-43a4-8d8a-bfea223b574e/image.png)
+    ![](/assets/img/category-HAE/251218-HAE-10-SF-intro-2-7.png)
+    ![](/assets/img/category-HAE/251218-HAE-11-SF-intro-2-8.png)
+    ![](/assets/img/category-HAE/251218-HAE-12-SF-intro-2-9.png)
+    ![](/assets/img/category-HAE/251218-HAE-13-SF-intro-2-10.png)
     
 
 ### 정규화 모델
@@ -583,10 +581,10 @@ use_math: true
         - MAE 차이: 0.0000
         - R² 차이: 0.0000
 - 모델 예측 결과
-    ![](https://velog.velcdn.com/images/dapin1490/post/5660a469-b1be-4c1d-96ba-4eb32ee4bb8f/image.png)
-    ![](https://velog.velcdn.com/images/dapin1490/post/7297b32e-8e83-4501-b92b-58532147d2db/image.png)
-    ![](https://velog.velcdn.com/images/dapin1490/post/6632644a-71c6-4dc2-907b-495773cfeb9b/image.png)
-    ![](https://velog.velcdn.com/images/dapin1490/post/2e98703f-3ee1-46c3-ab00-2c6a546db7d0/image.png)
+    ![](/assets/img/category-HAE/251218-HAE-14-SF-intro-2-11.png)
+    ![](/assets/img/category-HAE/251218-HAE-15-SF-intro-2-12.png)
+    ![](/assets/img/category-HAE/251218-HAE-16-SF-intro-2-13.png)
+    ![](/assets/img/category-HAE/251218-HAE-17-SF-intro-2-14.png)
 
 ### 종합 비교
 > 이전 모델(원본 데이터) vs 현재 모델(정규화 데이터) 비교
@@ -598,4 +596,4 @@ use_math: true
 | Lasso Regression                | 0.0313  | 0.990   | +0.9676 |
 | Random Forest                   | 0.0216  | 1.000   | +0.9784 |
 
-![](https://velog.velcdn.com/images/dapin1490/post/5afae79a-a06d-4344-b3a0-5f73378b4c65/image.png)
+![](/assets/img/category-HAE/251218-HAE-18-SF-intro-2-15.png)
