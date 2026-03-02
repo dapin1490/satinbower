@@ -71,7 +71,7 @@ use_math: true
         SAP의 커넥티드 매뉴팩처링 도입 전(왼쪽)과 후(오른쪽)의 할리 데이비슨 공장 전경
 
         > SAP의 커넥티드 매뉴팩처링이 가장 잘 구현된 곳은 할리 데이비슨(Harley Davidson) 공장이다. ERP의 전체 생산계획부터 생산실행까지 전부 SAP 시스템이 적용됐다. 할리데이비슨은 2009~2011년에 5개 공장 운영시스템을 재구축했으며 커넥티드 메뉴팩처링 도입 후 생산 계획은 21일에서 6시간으로 줄었으며, 제품 생산에서도 표준모델만 생산하던 것에서 고객이 직접 커스터마이징 한 모델까지 생산하게 됐다. 더불어 생산량도 25% 늘었으며 순익도 19% 상승한 반면 생산원가는 -7%로 절감하는 효과를 봤다.  
-        > 출처 : 인더스트리뉴스(https://www.industrynews.co.kr/news/articleView.html?idxno=4560)
+        > 출처 : 인더스트리뉴스([https://www.industrynews.co.kr/news/articleView.html?idxno=4560](https://www.industrynews.co.kr/news/articleView.html?idxno=4560))
 
 - 쿠트 스마트(중국)
     - 양산형과 고가 맞춤 양복의 중간 정도의 가격을 취하는 맞춤 양복
@@ -100,7 +100,7 @@ use_math: true
 - HMGICS
     - 링크 자료로 정리 대체하겠음. 전부 복붙하는 건 그닥 의미 없을 것 같으니 읽어보기.
     - [HMG 저널 운영팀 데이터가 쌓여서 스마트 팩토리가 되는 과정](https://hyundaimotorgroup.com/ko/story/CONT0000000000122310)
-    - [임성호 [르포] 컨베이어벨트 사라진 車공장…현대차그룹 싱가포르 혁신센터 | 연합뉴스](https://www.yna.co.kr/view/AKR20231120152500003)
+    - [임성호 \[르포] 컨베이어벨트 사라진 車공장…현대차그룹 싱가포르 혁신센터 \| 연합뉴스](https://www.yna.co.kr/view/AKR20231120152500003)
 
 # 설계 단계의 품질 결정 요인
 
