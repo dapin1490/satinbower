@@ -101,7 +101,7 @@ HMG 스마트 팩토리 홍보영상 봤음. 사람 별로 없고요 죄다 로�
         근데 이 기존 인력들을 다 버릴 수는 없으니 다시 교육해서 새 프로그램을 만들게 하는 거임.
     - 교재 13페이지 \<제조 지능화> 도식 참고
         <figure style="text-align: center;">
-        <a href="https://ksp.etri.re.kr/ksp/plan-report/file/638.pdf" target="_blank"><img src="/assets/img/category-HAE/251218-HAE-2-SF-intro-1-1.png" alt="스마트공장 개념도"></a>
+        <a href="https://ksp.etri.re.kr/ksp/plan-report/file/638.pdf" target="_blank"><img src="/assets/img/category-HAE/251218-HAE-2-SF-intro-1.png" alt="스마트공장 개념도"></a>
         <figcaption>제조 지능화</figcaption>
         </figure>
     - 지능화 vs 자율화
@@ -127,7 +127,7 @@ HMG 스마트 팩토리 홍보영상 봤음. 사람 별로 없고요 죄다 로�
 교재 19페이지 \<ISA 95 모델 자동화 피라미드> 참고. 이게 제조시장 모델 표준임. PLC는 설비마다, SCADA는 공장 전체 단위. ← 이걸 수직적 통합이라고 함. 통합이란 데이터가 끊이지 않고 잘 흐른다는 의미 정도로 알아들으면 됨.
 
 <figure style="text-align: center;">
-	<a href="https://www.linkedin.com/posts/foodready_mes-isa95-foodmanufacturing-activity-7328403188032733185-pf5u" target="_blank"><img src="/assets/img/category-HAE/251218-HAE-3-SF-intro-1-2.png" alt="ISA 95 모델 자동화 피라미드"></a>
+	<a href="https://www.linkedin.com/posts/foodready_mes-isa95-foodmanufacturing-activity-7328403188032733185-pf5u" target="_blank"><img src="/assets/img/category-HAE/251218-HAE-3-SF-intro-1.png" alt="ISA 95 모델 자동화 피라미드"></a>
 	<figcaption>ISA 95 모델 자동화 피라미드</figcaption>
 </figure>
 

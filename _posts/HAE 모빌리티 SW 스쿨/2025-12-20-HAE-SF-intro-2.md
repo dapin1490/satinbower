@@ -411,10 +411,10 @@ use_math: true
         - 수율은 80~98 정도
 - 그래프 아무거나 그려보기
     1. pH와 온도의 조합별 수율 확인하기  
-        ![](/assets/img/category-HAE/251218-HAE-4-SF-intro-2-1.png)  
+        ![](/assets/img/category-HAE/251220-HAE-1-SF-intro-2.png)  
         pH(x축)는 전체 범위에 걸쳐 수율이 괜찮은 반면 온도(y축)는 위와 아래의 수율에 차이가 있다 ⇒ 온도가 문제일 수도 있다  
     2. 일일 lot별 변화 그래프  
-        ![](/assets/img/category-HAE/251218-HAE-5-SF-intro-2-2.jpg)  
+        ![](/assets/img/category-HAE/251220-HAE-2-SF-intro-2.jpg)  
         ⇒ 온도가 수율에 더 영향을 주고 있다  
         → 온도는 산성 용액의 반응으로 발생하는 반응열에 의해 정해지며,  
         일반적으로 온도가 높을 경우 화학 반응이 촉진됨  
@@ -422,14 +422,14 @@ use_math: true
         → 처음과 끝에는 화학 반응이 원활하지 않았다  
         → 어떻게 하면 시작부터 반응을 원활하게 하고, 끝까지 원활하게 할 것인가?  
     3. 수율과 온도의 관계 좀 더 확인하기  
-        ![](/assets/img/category-HAE/251218-HAE-6-SF-intro-2-3.png)  
+        ![](/assets/img/category-HAE/251220-HAE-3-SF-intro-2.png)  
         일일 평균 데이터로 온도별 수율 그래프를 보면 확실히 온도가 낮을 때 수율도 낮다  
-        ![](/assets/img/category-HAE/251218-HAE-7-SF-intro-2-4.png)
+        ![](/assets/img/category-HAE/251220-HAE-4-SF-intro-2.png)
         다만 평균이 아닌 전체 데이터로 똑같이 그려보면 ‘온도가 낮으면 수율이 낮을 것이다’에 해당하지 않는 샘플도 꽤 있음  
-        ![](/assets/img/category-HAE/251218-HAE-8-SF-intro-2-5.png)  
+        ![](/assets/img/category-HAE/251220-HAE-5-SF-intro-2.png)  
         다시 봐도 이상치가 있음 → 이건 pH가 뭔가 했다. 이전엔 일일 평균 데이터로 온도-pH-수율 그래프를 그렸지만 거기선 보이지 않았기 때문에 전체 데이터로 다시 그려볼 필요가 있다.  
     4. 전체 데이터로 온도-pH-수율 그래프 다시 그리기 (온도와 pH가 각각 축이고 수율이 점 크기)  
-        ![](/assets/img/category-HAE/251218-HAE-9-SF-intro-2-6.png)  
+        ![](/assets/img/category-HAE/251220-HAE-6-SF-intro-2.png)  
         다시 보니까 pH와 온도의 관계는 명확한데, pH가 3.0을 넘어가는 순간 분포가 달라짐  
     5. 결론  
         - pH 정상(3.0 이하), 온도 낮음(45 미만) → 수율 하락  
@@ -512,10 +512,10 @@ use_math: true
         - R² 차이: 0.0188
 - 모델 예측 결과
     
-    ![](/assets/img/category-HAE/251218-HAE-10-SF-intro-2-7.png)
-    ![](/assets/img/category-HAE/251218-HAE-11-SF-intro-2-8.png)
-    ![](/assets/img/category-HAE/251218-HAE-12-SF-intro-2-9.png)
-    ![](/assets/img/category-HAE/251218-HAE-13-SF-intro-2-10.png)
+    ![](/assets/img/category-HAE/251220-HAE-7-SF-intro-2.png)
+    ![](/assets/img/category-HAE/251220-HAE-8-SF-intro-2.png)
+    ![](/assets/img/category-HAE/251220-HAE-9-SF-intro-2.png)
+    ![](/assets/img/category-HAE/251220-HAE-10-SF-intro-2.png)
     
 
 ### 정규화 모델
@@ -581,10 +581,10 @@ use_math: true
         - MAE 차이: 0.0000
         - R² 차이: 0.0000
 - 모델 예측 결과
-    ![](/assets/img/category-HAE/251218-HAE-14-SF-intro-2-11.png)
-    ![](/assets/img/category-HAE/251218-HAE-15-SF-intro-2-12.png)
-    ![](/assets/img/category-HAE/251218-HAE-16-SF-intro-2-13.png)
-    ![](/assets/img/category-HAE/251218-HAE-17-SF-intro-2-14.png)
+    ![](/assets/img/category-HAE/251220-HAE-11-SF-intro-2.png)
+    ![](/assets/img/category-HAE/251220-HAE-12-SF-intro-2.png)
+    ![](/assets/img/category-HAE/251220-HAE-13-SF-intro-2.png)
+    ![](/assets/img/category-HAE/251220-HAE-14-SF-intro-2.png)
 
 ### 종합 비교
 > 이전 모델(원본 데이터) vs 현재 모델(정규화 데이터) 비교
@@ -596,4 +596,4 @@ use_math: true
 | Lasso Regression                | 0.0313  | 0.990   | +0.9676 |
 | Random Forest                   | 0.0216  | 1.000   | +0.9784 |
 
-![](/assets/img/category-HAE/251218-HAE-18-SF-intro-2-15.png)
+![](/assets/img/category-HAE/251220-HAE-15-SF-intro-2.png)
