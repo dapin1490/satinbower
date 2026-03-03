@@ -10,7 +10,7 @@ use_math: true
 
 # 덤
 
-- 스크롤이 정말 길긴 한데,, 하나하나 HTML로 포장하는 건 너무 중노동이라 그냥 올림
+- 내가 한번 신경써서 스크롤 길이를 줄여봤습니다 양해하세요
 - 정리가 많이 성의없는 거 저도 압니다 그렇기 때문에 공개하는 진짜 처음(사실 아님) 공부할 때 쓴 성의있는 정리들
   - 넘파이 기초: <https://www.kaggle.com/code/dapin1490/adpy-w10-note>
   - 넘파이 그래프: <https://www.kaggle.com/code/dapin1490/adpy-w11-note>
@@ -57,8 +57,9 @@ use_math: true
 # 함수
 
 - 함수는,, 희생과 봉사정신으로 만드는 거다,, (내 의견 아님 강사님 의견임)
-- 기본형: 인자 받아서 뭔가 하기
 
+- <details markdown="1">
+  <summary>기본형: 인자 받아서 뭔가 하기</summary>
   ```python
   def greet(name):
       print(f"Greetings, {name}.")
@@ -66,18 +67,20 @@ use_math: true
   greet("Dale Vandermeer")
   greet("Harvey")
   ```
+  </details>
 
-- 인자 받고 돌려보내기
-
+- <details markdown="1">
+  <summary>인자 받고 돌려보내기</summary>
   ```python
   def add(a, b):
       return a + b
 
   print(add(345, 3458967))
   ```
+  </details>
 
-- 인자 받고 뭔가 하고 돌려보내기
-
+- <details markdown="1">
+  <summary>인자 받고 뭔가 하고 돌려보내기</summary>
   ```python
   def get_status(score):
       if score >= 60:
@@ -88,9 +91,10 @@ use_math: true
   print(get_status(59))
   print(get_status(60))
   ```
+  </details>
 
-- 여러 개 받거나 여러 개 돌려주기
-
+- <details markdown="1">
+  <summary>여러 개 받거나 여러 개 돌려주기</summary>
   ```python
   def packing(id, name, age):
       return {"id": id, "name": name, "age": age}
@@ -107,9 +111,10 @@ use_math: true
   (1, 'Dale Vandermeer', 42)
   '''
   ```
+  </details>
 
-- 가변 인자 1: 파라미터를 갯수 제한 없이 보낼 수 있음
-
+- <details markdown="1">
+  <summary>가변 인자 1: 파라미터를 갯수 제한 없이 보낼 수 있음</summary>
   ```python
   # 가변 인자: 갯수 제한 없이 보낼 수 있음
   def total(*args):
@@ -118,9 +123,10 @@ use_math: true
   print(total(1, 2, 3, 4, 5))
   print(total(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
   ```
+  </details>
 
-- 가변 인자 2: 함수에 정의되지 않은 파라미터는 직접 이름을 정해서 보낼 수 있음
-
+- <details markdown="1">
+  <summary>가변 인자 2: 함수에 정의되지 않은 파라미터는 직접 이름을 정해서 보낼 수 있음</summary>
   ```python
   # 가변 인자: 함수에 정의되지 않은 파라미터는 직접 이름을 정해서 보낼 수 있음
   def many_params(first, second, third, **kwargs):
@@ -138,9 +144,10 @@ use_math: true
   Kwargs: {'fourth': 4, 'fifth': 5}
   '''
   ```
+  </details>
 
-- 람다: 함수를 간단하게 표현할 수 있음
-
+- <details markdown="1">
+  <summary>람다: 함수를 간단하게 표현할 수 있음</summary>
   ```python
   add = lambda a, b: a + b
   print(add(345, 3458967))  # 3459312
@@ -150,7 +157,7 @@ use_math: true
   print(make_even(3))  # 4
   print(make_even(4))  # 4
   ```
-
+  </details>
 
 # numpy
 
@@ -162,8 +169,8 @@ use_math: true
   import numpy as np
   ```
 
-- 넘파이 기본 배열은 정수도 먹고 float도 먹는다
-
+- <details markdown="1">
+  <summary>넘파이 기본 배열은 정수도 먹고 float도 먹는다</summary>
   ```python
   np.array(range(10)), np.array(range(10)) / 2
 
@@ -172,9 +179,10 @@ use_math: true
     array([0. , 0.5, 1. , 1.5, 2. , 2.5, 3. , 3.5, 4. , 4.5]))
   '''
   ```
+  </details>
 
-- 다차원 넘파이
-
+- <details markdown="1">
+  <summary>다차원 넘파이</summary>
   ```python
   temp = [[1., 2., 3.], [4., 5., 6.], [7., 8., 9.]]
 
@@ -187,9 +195,10 @@ use_math: true
           [7., 8., 9.]])
   '''
   ```
+  </details>
 
-- 모양 확인, 타입 지정
-
+- <details markdown="1">
+  <summary>모양 확인, 타입 지정</summary>
   ```python
   print(np.zeros(10))
   print(np.zeros(10).shape, '\n')
@@ -211,6 +220,7 @@ use_math: true
   (2, 5)
   '''
   ```
+  </details>
 
 - 쓰레기 한 바가지만 주세요
 
@@ -218,8 +228,8 @@ use_math: true
   np.empty((2, 6))
   ```
 
-- 저거랑 똑같은 거 새로 주세요
-
+- <details markdown="1">
+  <summary>저거랑 똑같은 거 새로 주세요</summary>
   ```python
   temp = np.array([[1., 2., 3.], [4., 5., 6.]])
   temp2 = np.zeros_like(temp)
@@ -234,9 +244,10 @@ use_math: true
     [0. 0. 0.]]
   '''
   ```
+  </details>
 
-- 여기부터 저기까지 다 주세요
-
+- <details markdown="1">
+  <summary>여기부터 저기까지 다 주세요</summary>
   ```python
   print(np.arange(10))
   print(np.arange(10, 20))
@@ -250,9 +261,10 @@ use_math: true
   [10. 12. 14. 16. 18.]
   '''
   ```
+  </details>
 
-- 여기부터 저기까지 이만큼만 주세요
-
+- <details markdown="1">
+  <summary>여기부터 저기까지 이만큼만 주세요</summary>
   ```python
   print(np.linspace(0, 10, 5))
   print(np.linspace(0, 10, 5, endpoint=False))
@@ -270,9 +282,10 @@ use_math: true
   [ 0. +0.j  2.5+0.j  5. +0.j  7.5+0.j 10. +0.j]
   '''
   ```
+  </details>
 
-- 가챠는 이것만 돌려라
-
+- <details markdown="1">
+  <summary>가챠는 이것만 돌려라</summary>
   ```python
   np.random.seed(42)  # 모든 랜덤 배열이 똑같이 나온다 X, 난수의 순서가 매번 똑같다 O
 
@@ -292,9 +305,10 @@ use_math: true
     [66 62 23 35 78]]
   '''
   ```
+  </details>
 
-- 올바른 가챠
-
+- <details markdown="1">
+  <summary>올바른 가챠</summary>
   ```python
   print(np.random.normal(0, 1, (2, 3)))  # 표준정규분포
   print(np.random.normal(170, 10, (2, 3)))  # 평균 170, 표준편차 10
@@ -306,9 +320,10 @@ use_math: true
     [158.98902244 181.30228194 173.73118915]]
   '''
   ```
+  </details>
 
-- 섞어
-
+- <details markdown="1">
+  <summary>섞어</summary>
   ```python
   temp = np.arange(10)
   np.random.shuffle(temp)
@@ -316,9 +331,10 @@ use_math: true
 
   # >>> [2 8 4 1 0 9 6 5 7 3]
   ```
+  </details>
 
-- 바꾸지 말고 뽑아줘(중복 있음)
-
+- <details markdown="1">
+  <summary>바꾸지 말고 뽑아줘(중복 있음)</summary>
   ```python
   temp = np.arange(10)
   print(np.random.choice(temp, temp.size))
@@ -329,9 +345,10 @@ use_math: true
   [0 1 2 3 4 5 6 7 8 9]
   '''
   ```
+  </details>
 
-- 단위행렬
-
+- <details markdown="1">
+  <summary>단위행렬</summary>
   ```python
   print(np.eye(2))
   print(np.eye(2, 3))
@@ -355,9 +372,10 @@ use_math: true
     [0. 0. 1.]]
   '''
   ```
+  </details>
 
-- 대각선으로 펴주세요
-
+- <details markdown="1">
+  <summary>대각선으로 펴주세요</summary>
   ```python
   print(np.diag([1, 2, 3]))
 
@@ -367,9 +385,10 @@ use_math: true
     [0 0 3]]
   '''
   ```
+  </details>
 
-- 데이터 타입 확인
-
+- <details markdown="1">
+  <summary>데이터 타입 확인</summary>
   ```python
   print(np.array([1, 2, 3]).dtype)
   print(np.array([1, 2, 3], dtype=float).dtype)
@@ -384,11 +403,11 @@ use_math: true
   <U1
   bool
   '''
-
   ```
+  </details>
 
-- 데이터 타입 변경
-
+- <details markdown="1">
+  <summary>데이터 타입 변경</summary>
   ```python
   print(np.array([1, 2, 3], dtype=float))
   print(np.array([1, 2, 3], dtype=complex))
@@ -402,9 +421,10 @@ use_math: true
   [ True  True  True]
   '''
   ```
+  </details>
 
-- `--help`
-
+- <details markdown="1">
+  <summary><code class="language-plaintext highlighter-rouge">--help</code></summary>
   ```python
   # np.info(np.array)  # 출력 생략
   print(np.info(np.array([1, 2, 3, 4, 5])))
@@ -424,9 +444,10 @@ use_math: true
   None
   '''
   ```
+  </details>
 
-- 리스트 인덱싱 슬라이싱은 똑같이 적용 가능하나 전용 표현도 있긴 하다
-
+- <details markdown="1">
+  <summary>리스트 인덱싱 슬라이싱은 똑같이 적용 가능하나 전용 표현도 있긴 하다</summary>
   ```python
   temp = np.array([[1., 2., 3.], [4., 5., 6.], [7., 8., 9.]])
   print(temp[0])
@@ -447,9 +468,10 @@ use_math: true
   [2. 5.]
   '''
   ```
+  </details>
 
-- 논리 연산 연좌제와 범인 색출
-
+- <details markdown="1">
+  <summary>논리 연산 연좌제와 범인 색출</summary>
   ```python
   temp = np.array([[1., 2., 3.], [4., 5., 6.], [7., 8., 9.]])
 
@@ -481,9 +503,10 @@ use_math: true
   [2. 4. 6. 7. 8. 9.]
   '''
   ```
+  </details>
 
-- 이만큼 바꿔
-
+- <details markdown="1">
+  <summary>이만큼 바꿔</summary>
   ```python
   temp = np.array([[1., 2., 3.], [4., 5., 6.], [7., 8., 9.]])
 
@@ -500,9 +523,10 @@ use_math: true
     [ 7.   8.   9. ]]
   '''
   ```
+  </details>
 
-- 이런 것들만 바꿔
-
+- <details markdown="1">
+  <summary>이런 것들만 바꿔</summary>
   ```python
   temp = np.array([[1., 2., 3.], [4., 5., 6.], [7., 8., 9.]])
 
@@ -532,9 +556,10 @@ use_math: true
   [79  0  0 42 77 51 63  0 52  0  0  0  0  0 43 29 36  0 32 71]
   '''
   ```
+  </details>
 
-- np.nan은 float다 + nan은 확인 가능하다
-
+- <details markdown="1">
+  <summary>np.nan은 float다 + nan은 확인 가능하다</summary>
   ```python
   temp = np.random.randint(1, 100, (20))
   temp = temp.astype(float)
@@ -546,16 +571,17 @@ use_math: true
 
   '''
   [99. 50. 25. 24. 13. 60.  7. 57. 36. 45. 20. 65.  8. 16. 14. 76. 87. 15.
-    92. 98.]
+    1.  98.]
   [nan 50. 25. nan nan 60. nan 57. 36. 45. nan 65. nan nan nan 76. nan nan
     nan nan]
   [ True False False  True  True False  True False False False  True False
     True  True  True False  True  True  True  True]
   '''
   ```
+  </details>
 
-- nan 기피 현상
-
+- <details markdown="1">
+  <summary>nan 기피 현상</summary>
   ```python
   temp = np.array([66., 32., np.nan, 63., np.nan, 51., 25., 58., 63., 62., np.nan, 58., 58., np.nan, 49., 52., 42., 70., np.nan, 54.])
 
@@ -578,9 +604,10 @@ use_math: true
     58.   53.53 49.   52.   42.   70.   53.53 54.  ]
   '''
   ```
+  </details>
 
-- 모양 바꿔
-
+- <details markdown="1">
+  <summary>모양 바꿔</summary>
   ```python
   temp = np.random.randint(1, 100, (2 ** 3 * 3))
 
@@ -626,9 +653,10 @@ use_math: true
     [11 41 54 59 98  5]]]
   '''
   ```
+  </details>
 
-- 사칙연산 연좌제
-
+- <details markdown="1">
+  <summary>사칙연산 연좌제</summary>
   ```python
   temp = np.arange(1, 6+1).reshape(2, 3)
   print(f'original\n{temp}\n')
@@ -651,9 +679,10 @@ use_math: true
   # 출력 생략
   # 직접 실행하세요
   ```
+  </details>
 
-- 기본 통계
-
+- <details markdown="1">
+  <summary>기본 통계</summary>
   ```python
   temp = np.random.randint(0, 100+1, (4, 5))
 
@@ -726,9 +755,10 @@ use_math: true
   # 출력 생략
   # 직접 보세요
   ```
+  </details>
 
-- 사분위수
-
+- <details markdown="1">
+  <summary>사분위수</summary>
   ```python
   temp = np.random.randint(0, 100+1, (4, 5))
 
@@ -753,9 +783,10 @@ use_math: true
   quantile 100: 100
   '''
   ```
+  </details>
 
-- IQR 이상치 처리
-
+- <details markdown="1">
+  <summary>IQR 이상치 처리</summary>
   ```python
   temp = np.random.randint(0, 100+1, (4, 5))
   temp2 = np.random.randint(150, 300+1, (1, 5))
@@ -786,7 +817,7 @@ use_math: true
 
   # 출력 생략
   ```
-
+  </details>
 
 # pandas
 
@@ -796,8 +827,8 @@ use_math: true
   import pandas as pd
   ```
 
-- 시리즈
-
+- <details markdown="1">
+  <summary>시리즈</summary>
   ```python
   temp = pd.Series(np.random.randint(0, 100+1, (5)))
 
@@ -818,9 +849,10 @@ use_math: true
   [97 69 85 10 15]
   '''
   ```
+  </details>
 
-- 예쁜 인덱스 붙이기
-
+- <details markdown="1">
+  <summary>예쁜 인덱스 붙이기</summary>
   ```python
   temp = pd.Series(np.random.randint(0, 100+1, (5)), index=['a', 'b', 'c', 'd', 'e'])
 
@@ -843,11 +875,13 @@ use_math: true
   [96 72 58 69 79]
   '''
   ```
+  </details>
 
 - 넘파이에서 쓰던 기능은 다 쓸 수 있다~ (판다스가 넘파이를 wrapping했기 때문)
   - 넘파이 파트 참고하세요
-- 예쁜 인덱스 활용하기
 
+- <details markdown="1">
+  <summary>예쁜 인덱스 활용하기</summary>
   ```python
   temp = pd.Series(np.random.randint(1, 100+1, (5)), index=['a', 'b', 'c', 'd', 'e'])
 
@@ -874,9 +908,10 @@ use_math: true
   dtype: int32
   '''
   ```
+  </details>
 
-- 시리즈 했으면 데이터프레임도 해야지
-
+- <details markdown="1">
+  <summary>시리즈 했으면 데이터프레임도 해야지</summary>
   ```python
   temp = pd.DataFrame(np.random.randint(0, 100+1, (4, 5)))
 
@@ -901,14 +936,14 @@ use_math: true
     [44 19 64  7 15]]
   '''
   ```
-
+  </details>
 
 > 데이터 이거 쓰세요
 >
 > https://github.com/macro0630/smart-practice/blob/main/test.py
 
-- dict to DF
-
+- <details markdown="1">
+  <summary>dict to DF</summary>
   ```python
   temp = pd.DataFrame(data = equipment_data)
 
@@ -923,18 +958,22 @@ use_math: true
   | location       | A동 1라인    | A동 1라인    | A동 2라인    | A동 2라인    | B동 1라인      |
   | rated_capacity | 150          | 150          | 200          | 200          | 100            |
   | status         | ACTIVE       | ACTIVE       | ACTIVE       | ACTIVE       | ACTIVE         |
-- 단어 외우세요
+  </details>
 
+- <details markdown="1">
+  <summary>단어 외우세요</summary>
   [![](/assets/img/category-HAE/260205-HAE-1-python-data-1.png)](https://dandyrilla.github.io/2017-08-12/pandas-10min/)
 
   [![](/assets/img/category-HAE/260205-HAE-2-python-data-1.png)](https://ruaaaqn5s1u.tistory.com/27)
 
   [![](/assets/img/category-HAE/260205-HAE-3-python-data-1.png)](https://thebook.io/007029/0312/)
+  </details>
 
 - 이해 안되면 보세요
   - https://thebook.io/007029/0293/
-- 헤이 판다스 데이터 요약해줘
 
+- <details markdown="1">
+  <summary>헤이 판다스 데이터 요약해줘</summary>
   ```python
   temp = pd.DataFrame(data = equipment_data)
 
@@ -955,8 +994,10 @@ use_math: true
   | 50%              | NaN                | NaN                | NaN          | NaN                | 150.000000 |
   | 75%              | NaN                | NaN                | NaN          | NaN                | 200.000000 |
   | max              | NaN                | NaN                | NaN          | NaN                | 200.000000 |
-- 헤이 판다스 데이터 더 간단하게 요약해줘
+  </details>
 
+- <details markdown="1">
+  <summary>헤이 판다스 데이터 더 간단하게 요약해줘</summary>
   ```python
   temp = pd.DataFrame(data = equipment_data)
 
@@ -978,8 +1019,11 @@ use_math: true
   memory usage: 372.0 bytes
   '''
   ```
+  </details>
 
-- 데이터프레임은 인덱싱을 좀 다르게 해
+- <details markdown="1">
+  <summary>데이터프레임은 인덱싱을 좀 다르게 해</summary>
+
   - 그냥 인덱스 이름 쓰든가 → 보통 권장하지 않음
   - loc으로 인덱스 이름 쓰든가
   - iloc으로 숫자만 쓰든가
@@ -998,3 +1042,4 @@ use_math: true
   # 출력 길어서 생략
   # 그냥 뭐 필요해서 쓰다 보면 어떻게든 쓰게 됨 대충 보세요
   ```
+  </details>
