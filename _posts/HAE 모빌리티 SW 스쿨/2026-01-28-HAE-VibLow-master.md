@@ -26,22 +26,22 @@ use_math: true
     ![](/assets/img/category-HAE/260128-HAE-2-VibLow-master.png)  
 - 공장 아무거나 추가
 
-    <div style="column-count: 2"><img src="/assets/img/category-HAE/260128-HAE-3-VibLow-master.png"/><img src="/assets/img/category-HAE/260128-HAE-4-VibLow-master.png"/></div>
+    <div style="display: grid; grid-template-columns: repeat(2, auto); gap: 0.5rem; justify-items: start;"><img src="/assets/img/category-HAE/260128-HAE-3-VibLow-master.png"/><img src="/assets/img/category-HAE/260128-HAE-4-VibLow-master.png"/></div>
 
 - 공장에 공정 추가
 
-    <div style="column-count: 2"><img src="/assets/img/category-HAE/260128-HAE-5-VibLow-master.png"/><img src="/assets/img/category-HAE/260128-HAE-6-VibLow-master.png"/></div>
+    <div style="display: grid; grid-template-columns: repeat(2, auto); gap: 0.5rem; justify-items: start;"><img src="/assets/img/category-HAE/260128-HAE-5-VibLow-master.png"/><img src="/assets/img/category-HAE/260128-HAE-6-VibLow-master.png"/></div>
 
 - 설비 추가
 
-    <div style="column-count: 2"><img src="/assets/img/category-HAE/260128-HAE-7-VibLow-master.png"/><img src="/assets/img/category-HAE/260128-HAE-8-VibLow-master.png"/></div>
+    <div style="display: grid; grid-template-columns: repeat(2, auto); gap: 0.5rem; justify-items: start;"><img src="/assets/img/category-HAE/260128-HAE-7-VibLow-master.png"/><img src="/assets/img/category-HAE/260128-HAE-8-VibLow-master.png"/></div>
 
 - 측정 포인트 추가
 
-    <div style="column-count: 3">
-        <img src="/assets/img/category-HAE/260128-HAE-9-VibLow-master.png"/>
-        <img src="/assets/img/category-HAE/260128-HAE-10-VibLow-master.png"/>
-        <img src="/assets/img/category-HAE/260128-HAE-11-VibLow-master.png"/>
+    <div style="display: grid; grid-template-columns: repeat(3, auto); gap: 0.5rem; justify-items: start;">
+        <img src="/assets/img/category-HAE/260128-HAE-9-VibLow-master.png" style="max-width: 100%; height: auto;"/>
+        <img src="/assets/img/category-HAE/260128-HAE-10-VibLow-master.png" style="max-width: 100%; height: auto;"/>
+        <img src="/assets/img/category-HAE/260128-HAE-11-VibLow-master.png" style="max-width: 100%; height: auto;"/>
     </div>
 
     이름 쓰고 추가 누르기
