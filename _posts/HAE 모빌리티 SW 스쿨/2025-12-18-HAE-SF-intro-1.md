@@ -2,7 +2,7 @@
 title: "스마트팩토리 개요 및 유관기술 이해 (1)"
 author: dapin1490
 date: 2025-12-18 18:36:00 +09:00
-categories: [HAE, note]
+categories: [HAE, 스마트팩토리]
 tags: [현대오토에버, 모빌리티, 스마트팩토리]
 render_with_liquid: false
 ---

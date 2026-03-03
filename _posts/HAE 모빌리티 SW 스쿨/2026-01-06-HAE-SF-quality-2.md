@@ -2,7 +2,7 @@
 title: "스마트팩토리 품질관리 (2)"
 author: dapin1490
 date: 2026-01-06 18:00:00 +09:00
-categories: [HAE, note]
+categories: [HAE, 품질관리]
 tags: [현대오토에버, 모빌리티, 스마트팩토리, 품질, 품질관리]
 render_with_liquid: false
 use_math: true

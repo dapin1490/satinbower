@@ -2,7 +2,7 @@
 title: "디지털 트윈과 제조 지능화 (1)"
 author: dapin1490
 date: 2025-12-22 18:00:00 +09:00
-categories: [HAE, note]
+categories: [HAE, 디지털 트윈]
 tags: [현대오토에버, 모빌리티, 디지털 트윈, 제조 지능화]
 render_with_liquid: false
 use_math: true

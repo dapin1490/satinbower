@@ -2,7 +2,7 @@
 title: "PHM 추가 정리"
 author: dapin1490
 date: 2026-01-13 18:10:00 +09:00
-categories: [HAE, note]
+categories: [HAE, CPS/PHM]
 tags: [PHM, 예지보전, 진동, 센서, 신호 처리]
 render_with_liquid: false
 use_math: true
