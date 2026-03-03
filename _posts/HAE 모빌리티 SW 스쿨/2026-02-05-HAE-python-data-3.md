@@ -20,7 +20,7 @@ use_math: true
   - 위에 있는 걸 다 모아놓은 깃허브를 찾았어: [dapin1490/study-note/3 - 1 note/advanced python/WEEK LIST.md at main](https://github.com/dapin1490/study-note/blob/main/3%20-%201%20note/advanced%20python/WEEK%20LIST.md)
 - 읽어
   - [더북(TheBook) 모두의 데이터 분석 with 파이썬: UNIT 15 테이블 형태의 데이터를 쉽게 다루도록 도와주는 pandas 라이브러리](https://thebook.io/007029/0293/)
-  - 내가 판다스 처음 쓰기 시작할 때부터 AI 쓰기 전까지 매번 보던 거 있거든요 읽어: [한 권으로 끝내는 <판다스 노트>](https://wikidocs.net/book/4639)
+  - 내가 판다스 처음 쓰기 시작할 때부터 AI 쓰기 전까지 매번 보던 거 있거든요 읽어: [한 권으로 끝내는 \<판다스 노트\>](https://wikidocs.net/book/4639)
 
 # 요약
 - **함수**
@@ -958,6 +958,7 @@ use_math: true
   | location       | A동 1라인    | A동 1라인    | A동 2라인    | A동 2라인    | B동 1라인      |
   | rated_capacity | 150          | 150          | 200          | 200          | 100            |
   | status         | ACTIVE       | ACTIVE       | ACTIVE       | ACTIVE       | ACTIVE         |
+
   </details>
 
 - <details markdown="1">
@@ -970,7 +971,7 @@ use_math: true
   </details>
 
 - 이해 안되면 보세요
-  - https://thebook.io/007029/0293/
+  - <https://thebook.io/007029/0293>
 
 - <details markdown="1">
   <summary>헤이 판다스 데이터 요약해줘</summary>
@@ -994,6 +995,7 @@ use_math: true
   | 50%              | NaN                | NaN                | NaN          | NaN                | 150.000000 |
   | 75%              | NaN                | NaN                | NaN          | NaN                | 200.000000 |
   | max              | NaN                | NaN                | NaN          | NaN                | 200.000000 |
+
   </details>
 
 - <details markdown="1">
