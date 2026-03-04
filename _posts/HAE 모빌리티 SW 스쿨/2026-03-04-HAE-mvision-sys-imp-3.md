@@ -8,6 +8,68 @@ render_with_liquid: false
 use_math: true
 ---
 
+- [이미지 처리 기법 정리](#이미지-처리-기법-정리)
+  - [머신 비전 이미지 처리 툴박스 상세 가이드](#머신-비전-이미지-처리-툴박스-상세-가이드)
+    - [1. 전처리 1: 화질 및 색상 개선](#1-전처리-1-화질-및-색상-개선)
+    - [2. 전처리 2: 기하학적 변환 및 보정](#2-전처리-2-기하학적-변환-및-보정)
+    - [3. 특징 추출 준비: 노이즈 제거 및 형태 단순화](#3-특징-추출-준비-노이즈-제거-및-형태-단순화)
+    - [4. Rule-based Vision: 고전적 특징 및 도형 추출](#4-rule-based-vision-고전적-특징-및-도형-추출)
+    - [5. Deep Learning Vision: 의미 기반 객체 인식 및 생성](#5-deep-learning-vision-의미-기반-객체-인식-및-생성)
+  - [머신 비전 기법 선택 의사결정 트리](#머신-비전-기법-선택-의사결정-트리)
+    - [Step 1. 궁극적인 '목적'과 '환경'에 따른 큰 방향 결정](#step-1-궁극적인-목적과-환경에-따른-큰-방향-결정)
+    - [Step 2. 화질 및 색상 개선 (전처리 1단계)](#step-2-화질-및-색상-개선-전처리-1단계)
+    - [Step 3. 기하학적 변환 및 왜곡 보정 (전처리 2단계)](#step-3-기하학적-변환-및-왜곡-보정-전처리-2단계)
+    - [Step 4. 객체 분리 및 형태 단순화 (특징 추출 전 필수 단계)](#step-4-객체-분리-및-형태-단순화-특징-추출-전-필수-단계)
+    - [플로우차트](#플로우차트)
+- [딥러닝 배경지식](#딥러닝-배경지식)
+  - [GPU](#gpu)
+  - [기억 장치 memory](#기억-장치-memory)
+  - [딥러닝 프레임워크](#딥러닝-프레임워크)
+  - [모델 가용성 Model Availability](#모델-가용성-model-availability)
+  - [배포 인프라 deployment infrastructure](#배포-인프라-deployment-infrastructure)
+  - [GPU 클라우드](#gpu-클라우드)
+- [이항 분류](#이항-분류)
+  - [MNIST](#mnist)
+    - [데이터 가져오기](#데이터-가져오기)
+  - [이항 분류와 다항 분류](#이항-분류와-다항-분류)
+  - [이항 분류 데이터 준비](#이항-분류-데이터-준비)
+  - [모형 정의](#모형-정의)
+    - [모델 구성](#모델-구성)
+  - [Dense](#dense)
+  - [시그모이드 함수 sigmoid function](#시그모이드-함수-sigmoid-function)
+- [모형 훈련](#모형-훈련)
+  - [훈련](#훈련)
+  - [손실 함수 loss function](#손실-함수-loss-function)
+  - [MSE mean squared error](#mse-mean-squared-error)
+  - [교차 엔트로피 cross entropy](#교차-엔트로피-cross-entropy)
+  - [경사하강법 gradient descent](#경사하강법-gradient-descent)
+    - [경사하강법의 문제점](#경사하강법의-문제점)
+  - [학습률 learning rate](#학습률-learning-rate)
+  - [확률적 경사하강법 Stochastic GD](#확률적-경사하강법-stochastic-gd)
+  - [모멘텀](#모멘텀)
+  - [미니배치(Mini-batch) 경사하강법](#미니배치mini-batch-경사하강법)
+- [테스트](#테스트)
+  - [과소/과대 적합](#과소과대-적합)
+  - [데이터 분할](#데이터-분할)
+  - [과적합의 진단](#과적합의-진단)
+  - [테스트](#테스트-1)
+  - [직접 손글씨 입력해보기](#직접-손글씨-입력해보기)
+  - [손글씨 이미지 예측시키기](#손글씨-이미지-예측시키기)
+  - [차원 추가 방법](#차원-추가-방법)
+- [혼동 행렬](#혼동-행렬)
+  - [Fashion MNIST](#fashion-mnist)
+    - [데이터 가져오기](#데이터-가져오기-1)
+    - [학습](#학습)
+    - [평가](#평가)
+  - [혼동 행렬 confusion matrix](#혼동-행렬-confusion-matrix)
+  - [진/위 양성/음성](#진위-양성음성)
+  - [정확도 accuracy](#정확도-accuracy)
+  - [정밀도 precision](#정밀도-precision)
+  - [재현도 recall](#재현도-recall)
+  - [특이도 specificity](#특이도-specificity)
+  - [특이도가 낮을 경우 문제점](#특이도가-낮을-경우-문제점)
+  - [F1](#f1)
+
 # 이미지 처리 기법 정리
 
 <details markdown="1">
@@ -209,121 +271,9 @@ Q6. 이진화를 했는데 물체의 모양이 깔끔하지 않나? (모폴로�
 
 <details markdown="1">
 
-<div class="mermaid">
+![](/assets/img/category-HAE/260304-HAE-9-mvision-sys-imp-3.png)
 
-flowchart TB
-    Start(("이미지 입력")) --> Q1{"화질 및 색상 개선?"}
-    Q1 -- Yes --> Q1_1{"대비/밝기 문제?"}
-    Q1_1 -- Yes --> Q1_2{"컬러 이미지?"}
-    Q1_2 -- Yes --> A1["HSV 변환 후 V 채널 히스토그램 균일화"]
-    Q1_2 -- No --> A2["히스토그램 균일화"]
-    Q1_1 -- No --> Q1_3{"국소적 디테일 강조?"}
-    Q1_3 -- Yes --> A3["CLAHE 적용"]
-    Q1_3 -- No --> A4["감마 보정 / LUT"]
-    Q1 -- No --> Q2{"기하 왜곡/좌표 보정?"}
-    Q2 -- Yes --> Q2_1{"렌즈 왜곡 존재?"}
-    Q2_1 -- Yes --> A5["카메라 교정 Calibration"]
-    Q2_1 -- No --> Q2_2{"원근감 교정 4점?"}
-    Q2_2 -- Yes --> A6["투시 변환 Perspective"]
-    Q2_2 -- No --> A7["아핀 변환 Affine 3점"]
-    Q2 -- No --> Q3{"객체 분리 및 노이즈?"}
-    Q3 -- Yes --> Q3_1{"조명 불균형?"}
-    Q3_1 -- Yes --> A8["Adaptive Thresholding"]
-    Q3_1 -- No --> A9["Otsu Binarization"]
-    A8 --> A10["모폴로지 연산: Opening/Closing"]
-    A9 --> A10
-    A1 --> End(("최종 전처리 완료"))
-    A2 --> End
-    A3 --> End
-    A4 --> End
-    A5 --> End
-    A6 --> End
-    A7 --> End
-    A10 --> End
-
-</div>
-
-<div class="mermaid">
-
-flowchart TD
-    %% 전체 파이프라인의 시작
-    Start([이미지 처리 파이프라인 시작]) --> S1
-
-    subgraph S1 [1. 화질 및 색상 개선 전처리]
-        direction TB
-        Q1{밝기나 명암 문제가 있는가?}
-        Q1 -->|전체적으로 뿌옇고 대비 낮음| Q1_1{이미지 종류 및 목표}
-        Q1_1 -->|컬러 색상 비율 유지 필요| A1[HSV 변환 후 V채널 히스토그램 균일화]
-        Q1_1 -->|X-ray 등 세부 디테일 유지| A2[CLAHE - 국소적 균일화]
-        Q1 -->|역광이거나 일괄적으로 너무 어둡거나 밝음| A3[감마 보정 비선형 조정]
-        Q1 -->|특정 색상만 분리해야 함| A4[HSV 변환 후 마스크 비트와이즈 연산]
-        Q1 -->|문제 없음| Pass1[패스]
-    end
-
-    A1 & A2 & A3 & A4 --> S2
-    Pass1 --> S2
-
-    subgraph S2 [2. 기하학적 변환 및 왜곡 보정]
-        direction TB
-        Q2{형태나 구도가 틀어져 있는가?}
-        Q2 -->|볼록/오목한 렌즈 왜곡 어안렌즈 등| B1[카메라 왜곡 교정 체커보드 활용]
-        Q2 -->|비스듬히 찍힌 문서/체스보드| B2[투시 변환 Perspective Transform]
-        Q2 -->|단순 평행이동, 회전, 크기조절| B3[아핀 변환 Affine Transform]
-        Q2 -->|정상 구도| Pass2[패스]
-    end
-
-    B1 & B2 & B3 --> S3
-    Pass2 --> S3
-
-    subgraph S3 [3. 객체 분리 및 형태 단순화]
-        direction TB
-        Q3{고주파 잡음노이즈이 많은가?}
-        Q3 -->|Yes| C1[가우시안 블러 등 공간 필터링 적용]
-        Q3 -->|No| Q4
-
-        C1 --> Q4{배경을 없애고 흑/백으로 이진화?}
-        Q4 -->|이미지 조명이 고름| C2[Otsu 이진화 알고리즘]
-        Q4 -->|그림자 지거나 조명 불균일| C3[Adaptive Thresholding]
-        Q4 -->|이진화 불필요| Pass3[패스]
-
-        C2 & C3 --> Q5{이진화 후 물체 모양이 깔끔한가?}
-        Q5 -->|내부 구멍 뚫림, 선 끊어짐| C4[모폴로지: 팽창Dilation 또는 닫힘]
-        Q5 -->|주변 배경에 잔점 노이즈| C5[모폴로지: 침식Erosion 또는 열림]
-        Q5 -->|깔끔함| Pass3
-    end
-
-    C4 & C5 --> S4
-    Pass3 --> S4
-
-    subgraph S4 [4. 최종 분석 및 특징 추출]
-        direction TB
-        Q6{찾고자 하는 대상의 특징은?}
-
-        Q6 -->|명확한 수학적 규칙 / 완전 동일 물체| Q7{세부 탐지 대상}
-        Q7 -->|도로 차선, 동전 등 직선/원| D1[에지 검출 후 허프 변환Hough]
-        Q7 -->|다른 각도에서 찍힌 완전히 똑같은 물체| D2[ORB 등 특징점 매칭Feature Matching]
-
-        Q6 -->|형태가 복잡/다양 / 의미 기반 인식| Q8{데이터 및 연산 자원 환경}
-        Q8 -->|충분한 데이터와 GPU 학습 환경| D3[딥러닝 기반 모델 직접 학습]
-        Q8 -->|데이터가 적거나 빠른 개발 필요| D4[YOLO 등 사전 학습 모델 전이 학습]
-        Q8 -->|물체가 비스듬하거나 빽빽하게 겹침| D5[OBB: 회전된 바운딩 박스 탐지]
-        Q8 -->|이미지 내의 텍스트 추출| D6[OCR: 광학 문자 인식 적용]
-    end
-
-    D1 & D2 & D3 & D4 & D5 & D6 --> End([의사결정 및 처리 완료])
-
-    %% 스타일 지정
-    classDef startEnd fill:#f9f,stroke:#333,stroke-width:4px,color:#000;
-    classDef question fill:#ffe6cc,stroke:#d79b00,stroke-width:2px,color:#000;
-    classDef action fill:#d5e8d4,stroke:#82b366,stroke-width:2px,color:#000;
-    classDef pass fill:#f5f5f5,stroke:#666,stroke-width:1px,color:#666;
-
-    class Start,End startEnd;
-    class Q1,Q1_1,Q2,Q3,Q4,Q5,Q6,Q7,Q8 question;
-    class A1,A2,A3,A4,B1,B2,B3,C1,C2,C3,C4,C5,D1,D2,D3,D4,D5,D6 action;
-    class Pass1,Pass2,Pass3 pass;
-
-</div>
+![](/assets/img/category-HAE/260304-HAE-10-mvision-sys-imp-3.png)
 
 </details>
 </details>
