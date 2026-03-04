@@ -211,12 +211,6 @@ Q6. 이진화를 했는데 물체의 모양이 깔끔하지 않나? (모폴로�
 
 <div class="mermaid">
 
----
-config:
-  theme: default
-  look: neo
-  layout: dagre
----
 flowchart TB
     Start(("이미지 입력")) --> Q1{"화질 및 색상 개선?"}
     Q1 -- Yes --> Q1_1{"대비/밝기 문제?"}
@@ -250,13 +244,6 @@ flowchart TB
 </div>
 
 <div class="mermaid">
-
----
-config:
-  theme: default
-  look: neo
-  layout: dagre
----
 
 flowchart TD
     %% 전체 파이프라인의 시작
