@@ -762,7 +762,7 @@ show(cv.circle(dst, (cX, cY), radius, center_color, no_stroke))
 - 윤곽선을 다각형으로 근사하기 위한 알고리즘
 - `cv.approxPolyDP`으로 사용할 수 있음
 
-![](assets/img/category-HAE/260303-HAE-41-mvision-sys-imp-2.png)
+![](/assets/img/category-HAE/260303-HAE-41-mvision-sys-imp-2.png)
 
 ### 다각형으로 근사
 
