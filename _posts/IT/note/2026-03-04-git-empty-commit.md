@@ -7,8 +7,8 @@ tags: [지식, IT, git]
 render_with_liquid: false
 ---
 
-## table of contents
-- [Git 커밋 메시지 수정 \& `-allow-empty` 정리](#git-커밋-메시지-수정---allow-empty-정리)
+table of contents
+- [Git 커밋 메시지 수정, `--allow-empty` 정리](#git-커밋-메시지-수정---allow-empty-정리)
   - [1. 마지막 커밋 메시지 수정하기](#1-마지막-커밋-메시지-수정하기)
     - [1-1. 아직 `push` 안 한 경우 (로컬 전용)](#1-1-아직-push-안-한-경우-로컬-전용)
     - [1-2. 이미 `push`한 커밋의 메시지 수정](#1-2-이미-push한-커밋의-메시지-수정)
@@ -17,7 +17,7 @@ render_with_liquid: false
     - [2-2. 언제 쓰나?](#2-2-언제-쓰나)
   - [3. 요약](#3-요약)
 
-# Git 커밋 메시지 수정 & `-allow-empty` 정리
+# Git 커밋 메시지 수정, `--allow-empty` 정리
 
 ## 1. 마지막 커밋 메시지 수정하기
 
@@ -67,7 +67,7 @@ git commit --allow-empty -m "메시지"
 - 즉, 실제 코드 변화 0인 "빈 커밋(empty commit)"을 강제로 만든다.
 
   - 보통은 변경 없이 `git commit` 실행하면 "no changes added to commit" 같은 메시지와 함께 커밋 거부.
-  - `-allow-empty` 추가 → 변경이 없어도 커밋 생성.
+  - `--allow-empty` 추가 → 변경이 없어도 커밋 생성.
 
 ### 2-2. 언제 쓰나?
 
