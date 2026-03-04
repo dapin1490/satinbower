@@ -45,6 +45,18 @@ This work is published under [MIT][mit] License.
 ## 로컬 실행
 `bundle exec jekyll serve`
 
+## 더보기 적용
+
+태그 위아래로 한 줄씩 띄고 쓰기
+
+```html
+<details markdown="1">
+
+    ...
+
+</details>
+```
+
 ## 머메이드 차트 작성
 
 ```html
