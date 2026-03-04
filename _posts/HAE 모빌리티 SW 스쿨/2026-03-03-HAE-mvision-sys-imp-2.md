@@ -527,6 +527,7 @@ display(show(dst))
 - 컨볼루션(convolution)을 이용하여 구현
   - 중심 화소의 값을 인접 화소값들의 가중 합으로 대체하는 연산
 - 가중치 2차원 배열: 커널(kernel), 필터(filter), 또는 마스크(mask)라고 함
+![](/assets/img/category-HAE/260303-HAE-38-mvision-sys-imp-2.png)
 
 ## 평균값 필터링
 
@@ -548,6 +549,9 @@ show(dst)
 
 - 이미지를 흐리게(blur) 만드는 방법
 - 가우시안 함수(=통계의 정규 분포)를 이용 → 가운데는 많이, 주변은 적게 반영
+
+  ![](/assets/img/category-HAE/260303-HAE-39-mvision-sys-imp-2.png)
+
 - 커널 내 (예: 5x5 범위)에서만 적용
 
   ```python
@@ -649,8 +653,8 @@ show(edges) # Canny 엣지 검출 결과 출력
 - 이미지의 잡음도 고주파이므로 경계선 검출을 방해할 수 있음
 - 이미지를 흐리게 하는 것은 낮은 주파수만 통과시키는 것과 같음(low-pass filter)
 - 경계선 검출 전에 이미지를 흐리게 하여 잡음을 뭉개면 경계선을 검출하는데 도움이 됨
-- 3x3 가우시안 블러를 했을 때
-- 15x15 가우시안 블러를 했을 때
+
+![](/assets/img/category-HAE/260303-HAE-40-mvision-sys-imp-2.png)
 
 </details>
 
@@ -757,8 +761,8 @@ show(cv.circle(dst, (cX, cY), radius, center_color, no_stroke))
 
 - 윤곽선을 다각형으로 근사하기 위한 알고리즘
 - `cv.approxPolyDP`으로 사용할 수 있음
-- 허용오차를 벗어남 → 남김
-- 허용오차에 포함 → 지움
+
+![](assets/img/category-HAE/260303-HAE-41-mvision-sys-imp-2.png)
 
 ### 다각형으로 근사
 
