@@ -1,6 +1,7 @@
 # custom
 .obsidian
 **tempignore**
+_includes/profile_readme.md
 
 # Bundler cache
 .bundle

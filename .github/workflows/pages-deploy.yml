@@ -27,6 +27,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Fetch Remote Profile README
+        run: |
+          curl -o _includes/profile_readme.md https://raw.githubusercontent.com/dapin1490/dapin1490/refs/heads/main/README.md
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
