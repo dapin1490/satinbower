@@ -8,9 +8,11 @@ render_with_liquid: false
 use_math: true
 ---
 
+> Gemini가 정리해준 내용이 일부 포함됨
+{: .prompt-info }
+
 > table of contents
 {: .prompt-tip }
-
 - [스프링부트](#스프링부트)
 - [Controller 만들기](#controller-만들기)
   - [기본적인 Controller](#기본적인-controller)
@@ -118,7 +120,7 @@ public class NewbieController {
 
 - 위의 코드를 좀 더 응용하면 아래와 같이 만들 수 있다.
     - 패스 변수로 계산 모드를 지정하고, 요청 파라미터로 계산할 숫자들을 전달한다.
-    - 이때 요청 파라미터에는 자바 기본 문법 중 하나인 …으로 하나의 변수에 여러 값을 받을 수 있게 했다. 겨우 숫자 2개만 연산 가능한 계산기는 재미 없잖아.
+    - 이때 요청 파라미터에는 자바 기본 문법 중 하나인 `...`으로 하나의 변수에 여러 값을 받을 수 있게 했다. 겨우 숫자 2개만 연산 가능한 계산기는 재미 없잖아.
     - 요청 파라미터 옆에 있는 `required = false` 는 이 값을 필수적으로 전달하지 않아도 일단 오류 없이 실행은 된다는 거임. 이거 없이 파라미터 전달 안하고 링크 들어가면 오류난다.
     - 반환되는 값은 html의 body가 되기 때문에 서식을 추가하면 그대로 적용된다.
 
@@ -187,9 +189,9 @@ public class NewbieController {
 ```
 
 - 요청 파라미터에 넣을 config는 대충 이정도 알면 일단 내가 원하는 만큼 꾸미는 데에는 지장이 없을 것 같음
-    - value: url에 요청 파라미터로 넣을 이름. 예를 들어 아래의 코드는 `http://localhost:8080/newbie?query=write%20my%20message` 라고 써야 파라미터가 전달된다. value를 쓰지 않을 경우 변수명인 msg가 대신 사용된다.
-    - required = false : 파라미터가 없어도 요청을 허용 ← 이게 없으면 파라미터가 없을 때 아예 오류가 나버림
-    - defaultValue : 파라미터 미전달 시 사용할 기본 문구. 지금 구현된 코드에는 CSS를 같이 쓰다보니 좀 길어졌는데 보통은 html 파일명을 반환하니까 html로 따로 써두면 저렇게 길게 쓸 일이 없긴 하다.
+    - `value`: url에 요청 파라미터로 넣을 이름. 예를 들어 아래의 코드는 `http://localhost:8080/newbie?query=write%20my%20message` 라고 써야 파라미터가 전달된다. value를 쓰지 않을 경우 변수명인 msg가 대신 사용된다.
+    - `required = false` : 파라미터가 없어도 요청을 허용 ← 이게 없으면 파라미터가 없을 때 아예 오류가 나버림
+    - `defaultValue` : 파라미터 미전달 시 사용할 기본 문구. 지금 구현된 코드에는 CSS를 같이 쓰다보니 좀 길어졌는데 보통은 html 파일명을 반환하니까 html로 따로 써두면 저렇게 길게 쓸 일이 없긴 하다.
 
 ```java
 package com.example.demo.controller;
@@ -493,38 +495,38 @@ Google에서 개발한 오픈 소스 RPC 프레임워크로, 고성능 마이크
 
 ## 참고문헌
 
-[1] Red Hat. (2020, May 14). *What is a REST API?*. https://www.redhat.com/en/topics/api/what-is-a-rest-api
+[1] Red Hat. (2020, May 14). *What is a REST API?*. <https://www.redhat.com/en/topics/api/what-is-a-rest-api>
 
-[2] Fielding, R. T. (2000). *Architectural Styles and the Design of Network-based Software Architectures* (Doctoral dissertation). University of California, Irvine. https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf
+[2] Fielding, R. T. (2000). *Architectural Styles and the Design of Network-based Software Architectures* (Doctoral dissertation). University of California, Irvine. <https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf>
 
-[3] IBM. (n.d.). *What is a REST API?*. https://www.ibm.com/think/topics/rest-apis
+[3] IBM. (n.d.). *What is a REST API?*. <https://www.ibm.com/think/topics/rest-apis>
 
-[4] Thymeleaf. (n.d.). *Tutorial: Using Thymeleaf*. https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html
+[4] Thymeleaf. (n.d.). *Tutorial: Using Thymeleaf*. <https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html>
 
-[5] JetBrains. (2025, November 26). *Thymeleaf | IntelliJ IDEA Documentation*. https://www.jetbrains.com/help/idea/thymeleaf.html
+[5] JetBrains. (2025, November 26). *Thymeleaf \| IntelliJ IDEA Documentation*. <https://www.jetbrains.com/help/idea/thymeleaf.html>
 
-[6] Today Software Magazine. (n.d.). *Template Engines for Java Web Development*. https://www.todaysoftmag.com/article/907/template-engines-for-java-web-development
+[6] Today Software Magazine. (n.d.). *Template Engines for Java Web Development*. <https://www.todaysoftmag.com/article/907/template-engines-for-java-web-development>
 
-[7] Spring.io. (2020, February 24). *Thymeleaf :: Spring Framework*. https://docs.spring.io/spring-framework/reference/web/webmvc-view/mvc-thymeleaf.html
+[7] Spring.io. (2020, February 24). *Thymeleaf :: Spring Framework*. <https://docs.spring.io/spring-framework/reference/web/webmvc-view/mvc-thymeleaf.html>
 
-[8] Obregon, A. (2024, June 2). *Exploring the Thymeleaf Dependency — A Beginner's Overview*. Medium. https://medium.com/@AlexanderObregon/exploring-the-thymeleaf-dependency-a-beginners-overview-aa44007a7ba6
+[8] Obregon, A. (2024, June 2). *Exploring the Thymeleaf Dependency — A Beginner's Overview*. Medium. <https://medium.com/@AlexanderObregon/exploring-the-thymeleaf-dependency-a-beginners-overview-aa44007a7ba6>
 
-[9] Tistory. (2024, December 3). *\[Spring] 타임리프(Thymeleaf) 5가지 기본 표현식/자주 쓰는 구문 정리*. https://bnzn2426.tistory.com/140
+[9] Tistory. (2024, December 3). *\[Spring] 타임리프(Thymeleaf) 5가지 기본 표현식/자주 쓰는 구문 정리*. <https://bnzn2426.tistory.com/140>
 
-[10] ITM Web of Conferences. (2021). *Survey on Template Engines in Java*. https://www.itm-conferences.org/articles/itmconf/pdf/2021/02/itmconf_icitsd2021_01007.pdf
+[10] ITM Web of Conferences. (2021). *Survey on Template Engines in Java*. <https://www.itm-conferences.org/articles/itmconf/pdf/2021/02/itmconf_icitsd2021_01007.pdf>
 
-[11] FastAPI. (n.d.). *FastAPI - Introduction*. https://fastapi.tiangolo.com/
+[11] FastAPI. (n.d.). *FastAPI - Introduction*. <https://fastapi.tiangolo.com/>
 
-[12] Microsoft. (2024, February 21). *Overview of Python web frameworks for Azure*. https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview
+[12] Microsoft. (2024, February 21). *Overview of Python web frameworks for Azure*. <https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview>
 
-[13] Ramirez, S. (2020). *Modern APIs with FastAPI and Python*. https://tiangolo.medium.com/introducing-fastapi-fdc1206d453f
+[13] Ramirez, S. (2020). *Modern APIs with FastAPI and Python*. <https://tiangolo.medium.com/introducing-fastapi-fdc1206d453f>
 
-[14] Postman. (2025, November 9). *Types of APIs: A Complete Guide to API Architectures*. https://blog.postman.com/different-types-of-apis/
+[14] Postman. (2025, November 9). *Types of APIs: A Complete Guide to API Architectures*. <https://blog.postman.com/different-types-of-apis/>
 
-[15] freeCodeCamp. (2023, March 7). *Different Types of APIs – SOAP vs REST vs GraphQL*. https://www.freecodecamp.org/news/rest-vs-graphql-apis/
+[15] freeCodeCamp. (2023, March 7). *Different Types of APIs – SOAP vs REST vs GraphQL*. <https://www.freecodecamp.org/news/rest-vs-graphql-apis/>
 
-[16] GraphQL Foundation. (n.d.). *Introduction to GraphQL*. https://graphql.org/learn/
+[16] GraphQL Foundation. (n.d.). *Introduction to GraphQL*. <https://graphql.org/learn/>
 
-[17] gRPC Authors. (n.d.). *What is gRPC?*. https://grpc.io/docs/what-is-grpc/introduction/
+[17] gRPC Authors. (n.d.). *What is gRPC?*. <https://grpc.io/docs/what-is-grpc/introduction/>
 
-[18] Red Hat. (2023, May 4). *What is a webhook?*. https://www.redhat.com/en/topics/automation/what-is-a-webhook
+[18] Red Hat. (2023, May 4). *What is a webhook?*. <https://www.redhat.com/en/topics/automation/what-is-a-webhook>
