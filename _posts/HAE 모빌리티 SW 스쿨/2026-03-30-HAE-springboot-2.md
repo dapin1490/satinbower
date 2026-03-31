@@ -3,7 +3,7 @@ title: "스프링부트 (2)"
 author: dapin1490
 date: 2026-03-30 19:00:00 +09:00
 categories: [HAE, 스프링부트]
-tags: [현대오토에버, 모빌리티, 스프링부트, MVC, REST API, Thymeleaf]
+tags: [현대오토에버, 모빌리티, 스프링부트, MVC, REST API, Thymeleaf, MyBatis, SQL]
 render_with_liquid: false
 use_math: true
 ---
@@ -23,6 +23,15 @@ use_math: true
   - [8. UI 만들기](#8-ui-만들기)
   - [자 이게 요점이야](#자-이게-요점이야)
 - [SQL 연동 백엔드 데모 구현하기](#sql-연동-백엔드-데모-구현하기)
+  - [큰 그림: 스프링부트가 하는 일](#큰-그림-스프링부트가-하는-일)
+  - [1. 스타터 프로젝트 + `application.properties` (MyBatis 제외)](#1-스타터-프로젝트--applicationproperties-mybatis-제외)
+  - [2. `User.java` (모델 / 도메인)](#2-userjava-모델--도메인)
+  - [3. `UserMapper.java` + `UserMapper.xml` (DB 접근 계층)](#3-usermapperjava--usermapperxml-db-접근-계층)
+  - [4. `UserService.java` (비즈니스 로직)](#4-userservicejava-비즈니스-로직)
+  - [5. `UserController.java` + 서버 첫 실행](#5-usercontrollerjava--서버-첫-실행)
+  - [6. `application.properties`에 MyBatis 설정 추가](#6-applicationproperties에-mybatis-설정-추가)
+  - [7. `DashboardViewController` + `dashboard.html` (UI)](#7-dashboardviewcontroller--dashboardhtml-ui)
+  - [요약](#요약)
 
 ## 블로그 백엔드 데모 구현하기
 
@@ -84,7 +93,7 @@ Spring Initializr에서 프로젝트 설정을 갖추어 초기 폴더를 만든
 
 ---
 config:
-  theme: redux
+  theme: default
   look: neo
   layout: dagre
 
@@ -97,6 +106,8 @@ flowchart TD
   D --> E["H2 DataSource 생성 (jdbc:h2:mem:testdb)"]
   D --> F["SQL 초기화 실행 (spring.sql.init.mode=always)"]
   F --> G["schema.sql 실행: <br>posts 테이블/샘플 데이터 준비"]
+
+linkStyle default stroke:#1AAAC7
 
 </pre>
 
@@ -166,7 +177,7 @@ flowchart TD
 
 ---
 config:
-  theme: redux
+  theme: default
   look: neo
   layout: dagre
 
@@ -177,6 +188,8 @@ flowchart TB
     B -- 요청 바디/응답 바디 --> C["Post 객체 (src/main/java/.../model/Post.java)"]
     C -- 값 전달 --> D["Service/Repository 계층"]
     D -- DB 행 ↔ Post 변환 --> E["posts 테이블 (H2)"]
+
+linkStyle default stroke:#1AAAC7
 
 </pre>
 
@@ -237,7 +250,7 @@ flowchart TB
 
 ---
 config:
-  theme: redux
+  theme: default
   look: neo
   layout: dagre
 
@@ -251,6 +264,8 @@ flowchart TD
   E --> F[JdbcTemplate executes SQL]
   F --> G[H2 database: posts table]
   G --> F --> E --> D --> C --> H[HTTP Response JSON]
+
+linkStyle default stroke:#1AAAC7
 
 </pre>
 
@@ -294,7 +309,7 @@ flowchart TD
 
 ---
 config:
-  theme: redux
+  theme: default
   look: neo
   layout: dagre
 
@@ -307,6 +322,8 @@ flowchart TD
   D --> E[JdbcTemplate]
   E --> F["H2 / posts 테이블"]
   F --> E --> D --> C --> B --> G["HTTP Response(JSON)"]
+
+linkStyle default stroke:#1AAAC7
 
 </pre>
 
@@ -347,7 +364,7 @@ flowchart TD
 
 ---
 config:
-  theme: redux
+  theme: default
   look: neo
   layout: dagre
 
@@ -360,6 +377,8 @@ flowchart TD
   D --> E[JdbcTemplate]
   E --> F[H2 posts 테이블]
   F --> E --> D --> C -->|"응답 바디(JSON)"| B -->|HTTP Response| A
+
+linkStyle default stroke:#1AAAC7
 
 </pre>
 
@@ -419,7 +438,7 @@ flowchart TD
 
 ---
 config:
-  theme: redux
+  theme: default
   look: neo
   layout: dagre
 
@@ -437,6 +456,8 @@ flowchart TD
 
   C -->|"axios.post('/posts') 또는 axios.put('/posts/{id}')"| D2["PostController POST/PUT"]
   C -->|"axios.delete('/posts/{id}')"| D3[PostController DELETE]
+
+linkStyle default stroke:#1AAAC7
 
 </pre>
 
@@ -505,7 +526,7 @@ flowchart TD
 
 ---
 config:
-  theme: redux
+  theme: default
   look: neo
   layout: dagre
 
@@ -525,6 +546,8 @@ flowchart TD
   MODEL -.공통 데이터 구조.- SERVICE
   MODEL -.공통 데이터 구조.- REPO
 
+linkStyle default stroke:#1AAAC7
+
 </pre>
 
 - 그래서 이게 뭘 한 거냐면
@@ -535,9 +558,6 @@ flowchart TD
 
 ## SQL 연동 백엔드 데모 구현하기
 
-> 이거 아직 정리 다 못했음 일단 그렇구나 하세요
-{: .prompt-info }
-
 1. `src/main/resources/application.properties` : SQL 연동 설정
 2. `src/main/java/com/example/mysql/model/User.java` : 데이터 형식 정의
 3. `src/main/java/com/example/mysql/mapper/UserMapper.java` : Mapper 인터페이스 추가
@@ -545,3 +565,157 @@ flowchart TD
 5. `src/main/java/com/example/mysql/service/UserService.java` : 서비스
 6. `src/main/java/com/example/mysql/controller/UserController.java` : 컨트롤러
 7. `src/main/resources/application.properties` : mybatis 관련 설정 업데이트
+
+### 큰 그림: 스프링부트가 하는 일
+
+스프링부트는 웹 서버를 띄우고, 설정을 읽어서, 요청이 오면 적절한 코드를 실행하는 프레임워크다.
+
+지금 프로젝트는 MySQL + MyBatis로 DB에 접속하고, REST API(`UserController`)로 JSON을 주고받는 구조. 나중에 추가한 `/dashboard`는 화면(HTML)을 보여 주는 전통적인 MVC의 구성요소임.
+
+<pre class="mermaid">
+
+---
+config:
+  theme: default
+  look: neo
+  layout: dagre
+
+---
+
+flowchart LR
+  subgraph client [클라이언트]
+    B[브라우저 또는 Postman]
+  end
+  subgraph spring [스프링부트 앱]
+    C[Controller]
+    S[Service]
+    M[Mapper + MyBatis]
+    DB[(MySQL)]
+  end
+  B -->|HTTP 요청| C
+  C --> S
+  S --> M
+  M --> DB
+  DB --> M
+  M --> S
+  S --> C
+  C -->|HTTP 응답| B
+
+linkStyle default stroke:#1AAAC7
+
+</pre>
+
+### 1. 스타터 프로젝트 + `application.properties` (MyBatis 제외)
+
+스타터는 이미 "웹 + JDBC + MyBatis" 같은 의존성 묶음을 넣어 둔 템플릿이라, 직접 `pom.xml`을 처음부터 다 짤 필요를 줄여 준다.
+
+가장 먼저 수정한 `application.properties`의 역할:
+
+- `spring.datasource.*`: "어떤 MySQL에 붙을지" (URL, DB 이름 `autoever`, 포트 `3306`, 사용자/비밀번호 등).
+- `spring.sql.init.*`: 스키마/데이터 초기화와 관련된 옵션(지금은 `#spring.sql.init.mode=always`는 주석).
+
+이 단계까지는 "DB 연결 정보만 준비"한 상태다. MyBatis용 설정이 없으면, 나중에 매퍼 XML을 아무리 만들어도 스프링이 그 파일을 어디서 찾을지 모름 *→ 그래서 나중에 매퍼 xml 추가 후 오류가 생겼을 수 있음.*
+
+### 2. `User.java` (모델 / 도메인)
+
+DB의 `users` 테이블 한 행(row)을 자바 객체로 표현한 것.
+
+- `id`, `name`, `email` 필드 + getter/setter
+
+    MyBatis가 SQL 결과를 이 클래스에 자동으로 채워 넣을 때 필드 이름, 컬럼 이름 매핑 규칙을 쓴다(프로젝트 설정에 따라 camelCase ↔ snake_case 처리 등).
+
+
+⇒ "데이터의 모양"을 자바 쪽에 정의한 단계
+
+### 3. `UserMapper.java` + `UserMapper.xml` (DB 접근 계층)
+
+여기서 MyBatis 패턴이 사용됨.
+
+- `UserMapper.java`: 자바 인터페이스만 있음. 메서드 이름이 곧 "운영할 SQL 작업"의 이름 (`findAll`, `insert` 등). `@Mapper`로 스프링이 구현체를 만들어 줌.
+- `UserMapper.xml`: 실제 SQL이 들어 있는 XML.
+    - `namespace`가 인터페이스 풀 패키지명과 일치해야 인터페이스 메서드와 `<select id="findAll">` 같은 태그가 연결됨.
+
+흐름 요약: 자바에서 "무슨 일을 할지" 선언 → XML에 "그 일을 SQL로 어떻게 할지" 작성.
+
+### 4. `UserService.java` (비즈니스 로직)
+
+컨트롤러가 바로 매퍼를 부르도록 할 수도 있지만, 보통 Service를 둔다.
+
+- 역할: "이름/이메일 비었으면 거절" 같은 규칙을 한곳에 모음.
+- 구현: 생성자로 `UserMapper`를 받아서(`UserService` → `UserMapper`) CRUD를 위임.
+
+나중에 로그인, 권한, 트랜잭션 같은 걸 넣을 때도 보통 Service에 붙인다.
+
+### 5. `UserController.java` + 서버 첫 실행
+
+`@RestController` + `@RequestMapping("/users")`는 HTTP 요청을 자바 메서드에 연결한다.
+
+- `GET /users` → 전체 목록
+- `GET /users/{id}` → 한 명
+- `POST /users` → 생성 (JSON body → `User` 객체)
+- `PUT /users/{id}` → 수정
+- `DELETE /users/{id}` → 삭제
+- "밖에서 보이는 입구"가 Controller이고, 안쪽은 Service → Mapper → DB 순서.
+
+### 6. `application.properties`에 MyBatis 설정 추가
+
+지금 파일에는 예를 들면 다음의 코드가 있음.
+
+- `mybatis.mapper-locations=classpath:mapper/*.xml`
+
+    → `src/main/resources/mapper/` 아래 XML을 매퍼 파일로 로드하라는 뜻.
+
+- `mybatis.type-aliases-package=com.example.mysql.model`
+
+    → XML에서 `resultType` 등에 긴 클래스명 대신 별칭을 쓰기 쉬워짐(지금 XML은 풀 패키지를 쓰고 있어도 동작에는 문제 없음).
+
+
+이 수정 사항이 중요한 점: MyBatis는 이 설정이 없으면 `UserMapper.xml`을 못 찾거나 매핑을 완성하지 못해 기동 단계에서 깨지는 경우가 많다. (에러 메시지에 `mapper-locations`, `BindingException`, `Invalid bound statement` 같은 말이 자주 나온다.)
+
+### 7. `DashboardViewController` + `dashboard.html` (UI)
+
+백엔드 수업 외의 내용이지만 구조만 짚으면:
+
+- `@Controller`: JSON이 아니라 뷰 이름을 반환 (`return "dashboard"`).
+- 스프링은 보통 Thymeleaf 등으로 `templates/dashboard.html`을 찾아 HTML 페이지를 만든 뒤 브라우저에 보낸다.
+- `UserController`는 `@RestController`라서 주로 JSON API용이고, `DashboardViewController`는 페이지 라우트용 → 역할이 다름.
+
+<pre class="mermaid">
+
+---
+config:
+  theme: default
+  look: neo
+  layout: elk
+
+---
+
+flowchart TB
+ subgraph api["REST API"]
+        UC["UserController"]
+        US["UserService"]
+        UM["UserMapper"]
+  end
+ subgraph page["화면"]
+        DC["DashboardViewController"]
+        T["dashboard.html"]
+  end
+    UC --> US
+    US --> UM
+    DC --> T
+
+</pre>
+
+### 요약
+
+| 순서 | 파일                               | 한 줄 요약                                       |
+| ---- | ---------------------------------- | ------------------------------------------------ |
+| 1    | `application.properties` (초기)    | MySQL에 어떻게 붙을지 설정                       |
+| 2    | `User.java`                        | DB 한 행과 같은 모양의 자바 객체                 |
+| 3    | `UserMapper.java` + `.xml`         | "어떤 SQL로 DB에 접근할지" 선언 + 구현           |
+| 4    | `UserService.java`                 | 규칙·검증·흐름을 담는 중간층                     |
+| 5    | `UserController.java`              | HTTP URL과 메서드를 자바에 연결 (API 입구)       |
+| 6    | `application.properties` (MyBatis) | XML 매퍼 위치 등 MyBatis가 동작하도록 연결       |
+| 7    | 대시보드                           | `/dashboard` 요청 시 HTML 화면 반환 (API와 별도) |
+
+이렇게 보면 설정 → 데이터 모양 → DB접근 → 규칙 → HTTP 입구 → MyBatis 연결 마무리 → (선택) 화면 순으로 층이 쌓인 것이고, 코드를 "위에서 아래로" 읽으면 요청이 어디로 흘러가는지 따라가기 쉽다.
