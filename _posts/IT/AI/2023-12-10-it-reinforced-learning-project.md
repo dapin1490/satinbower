@@ -2,7 +2,7 @@
 title: "2048 게임하는 강화학습 에이전트 만들어보기"
 author: dapin1490
 date: 2023-12-10 23:21:00 +09:00
-categories: [IT, Machine Learning]
+categories: [IT, AI]
 tags: [지식, IT, 프로젝트]
 render_with_liquid: false
 ---

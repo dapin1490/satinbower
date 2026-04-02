@@ -2,7 +2,7 @@
 title: "샴 네트워크와 엘라스틱 왜곡"
 author: dapin1490
 date: 2026-03-24 09:20:00 +09:00
-categories: [IT, Machine Learning]
+categories: [IT, AI]
 tags: [지식, IT, 머신러닝, 샴 네트워크, 엘라스틱 왜곡, 전이 학습, 학습률, 레이어 동결, 동적 학습률]
 render_with_liquid: false
 use_math: true

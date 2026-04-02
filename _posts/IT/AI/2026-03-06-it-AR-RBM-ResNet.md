@@ -2,7 +2,7 @@
 title: "AR, RBM, ResNet"
 author: dapin1490
 date: 2026-03-06 12:49:00 +09:00
-categories: [IT, Machine Learning]
+categories: [IT, AI]
 tags: [지식, IT, 머신러닝]
 render_with_liquid: false
 use_math: true

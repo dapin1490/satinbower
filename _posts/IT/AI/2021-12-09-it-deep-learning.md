@@ -2,7 +2,7 @@
 title: 딥러닝의 탄생과 활용
 author: dapin1490
 date: 2021-11-22 00:00:00 +09:00
-categories: [IT, Machine Learning]
+categories: [IT, AI]
 tags: [지식, IT, 딥러닝]
 render_with_liquid: false
 ---

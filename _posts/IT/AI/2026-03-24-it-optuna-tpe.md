@@ -2,7 +2,7 @@
 title: "Optuna와 TPE, 메타-하이퍼파라미터"
 author: dapin1490
 date: 2026-03-24 09:46:00 +09:00
-categories: [IT, Machine Learning]
+categories: [IT, AI]
 tags: [지식, IT, 머신러닝, Optuna, TPE, 메타-하이퍼파라미터]
 render_with_liquid: false
 use_math: true

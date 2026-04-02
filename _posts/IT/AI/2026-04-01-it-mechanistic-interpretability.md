@@ -2,7 +2,7 @@
 title: "AI의 기계론적 해석 가능성"
 author: dapin1490
 date: 2026-04-01 10:05:00 +09:00
-categories: [IT, Machine Learning]
+categories: [IT, AI]
 tags: [지식, IT, 머신러닝, 기계론적 해석가능성, Mechanistic Interpretability, 해석 가능한 AI, 희소 오토인코더, SAE, 희소 모델, Sparse Models, 딕셔너리 학습]
 render_with_liquid: false
 use_math: true
