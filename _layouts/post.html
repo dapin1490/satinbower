@@ -83,6 +83,67 @@ tail_includes:
   {{ content }}
 </div>
 
+<style>
+  :root {
+    --footnote-tooltip-width: 280px;
+    --footnote-tooltip-bg: #24292e;
+    --footnote-tooltip-color: #ffffff;
+  }
+
+  a.custom-tooltip {
+    position: relative;
+    cursor: help;
+    text-decoration: none;
+  }
+
+  a.custom-tooltip::after {
+    content: attr(data-content);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--footnote-tooltip-bg);
+    color: var(--footnote-tooltip-color);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    width: var(--footnote-tooltip-width);
+    white-space: normal;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    line-height: 1.4;
+  }
+
+  a.custom-tooltip:hover::after {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const anchorElements = document.querySelectorAll('a[href^="#ref"], a[href^="#fn"]');
+
+    anchorElements.forEach(function (anchorElement) {
+      const hrefValue = anchorElement.getAttribute('href');
+      if (!hrefValue) return;
+
+      const targetId = hrefValue.slice(1);
+      const targetElement = document.getElementById(targetId);
+      if (!targetElement) return;
+
+      const tooltipText = (targetElement.innerText || '').replace(/↩/g, '').trim();
+      if (!tooltipText) return;
+
+      anchorElement.classList.add('custom-tooltip');
+      anchorElement.setAttribute('data-content', tooltipText);
+    });
+  });
+</script>
+
 <div class="post-tail-wrapper text-muted">
 
   <!-- categories -->
