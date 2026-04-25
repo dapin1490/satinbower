@@ -1,0 +1,14 @@
+services:
+  blog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: blog-server
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    stdin_open: true
+    tty: true

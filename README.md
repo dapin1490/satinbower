@@ -41,6 +41,26 @@ This work is published under [MIT][mit] License.
 ## 로컬 실행
 `bundle exec jekyll serve`
 
+## Docker 실행
+
+### 1) 빌드 + 실행
+```powershell
+docker compose up --build
+```
+
+### 2) 백그라운드 실행
+```powershell
+docker compose up --build -d
+```
+
+### 3) 종료
+```powershell
+docker compose down
+```
+
+### 4) 접속 주소
+`http://localhost:4000/satinbower`
+
 ## 더보기 적용
 
 태그 위아래로 한 줄씩 띄고 쓰기
