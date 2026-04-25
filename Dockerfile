@@ -10,4 +10,4 @@ RUN gem install bundler
 
 EXPOSE 4000 35729
 
-CMD ["bash", "-lc", "git config --global --add safe.directory '*' && sed -i 's/\\r$//' tools/init && bundle install && bash tools/init && bundle exec jekyll serve --host 0.0.0.0 --watch --force_polling --livereload"]
+CMD ["bash", "-lc", "git config --global --add safe.directory '*' && sed -i 's/\\r$//' tools/init && if [ \"${RUN_INIT:-0}\" = \"1\" ]; then bash tools/init; fi && bundle install && bundle exec jekyll serve --host 0.0.0.0 --watch --force_polling --livereload"]

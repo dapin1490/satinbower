@@ -48,6 +48,8 @@ This work is published under [MIT][mit] License.
 docker compose up --build
 ```
 
+기본 실행은 `tools/init`을 실행하지 않으므로, 커밋되지 않은 변경사항이 있어도 로컬 렌더링 테스트가 가능하다.
+
 ### 2) 백그라운드 실행
 ```powershell
 docker compose up --build -d
@@ -59,7 +61,12 @@ docker compose down
 ```
 
 ### 4) 접속 주소
-`http://localhost:4000/satinbower`
+`http://localhost:4000/satinbower/`
+
+### 5) init이 필요할 때만 1회 실행
+```powershell
+docker compose run --rm -e RUN_INIT=1 blog
+```
 
 ## 더보기 적용
 
