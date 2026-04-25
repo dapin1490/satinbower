@@ -55,15 +55,27 @@ docker compose up --build
 docker compose up --build -d
 ```
 
-### 3) 종료
+### 3) 종료(컨테이너 삭제)
 ```powershell
 docker compose down
 ```
 
-### 4) 접속 주소
+`docker compose down`은 컨테이너를 삭제한다. 컨테이너를 재사용하려면 아래 명령을 사용한다.
+
+### 4) 재사용용 중지(삭제 안 함)
+```powershell
+docker compose stop
+```
+
+### 5) 재사용용 재시작
+```powershell
+docker compose start
+```
+
+### 6) 접속 주소
 `http://localhost:4000/satinbower/`
 
-### 5) init이 필요할 때만 1회 실행
+### 7) init이 필요할 때만 1회 실행
 ```powershell
 docker compose run --rm -e RUN_INIT=1 blog
 ```
