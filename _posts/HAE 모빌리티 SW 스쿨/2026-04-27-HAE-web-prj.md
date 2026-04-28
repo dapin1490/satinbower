@@ -165,7 +165,7 @@ UI/UX 스펙 정의, ADR 작성, AGENTS 문서 작성 등
 
   - ER 다이어그램
 
-    <div class="mermaid">
+    <pre class="mermaid">
 
     erDiagram
       direction LR
@@ -212,7 +212,7 @@ UI/UX 스펙 정의, ADR 작성, AGENTS 문서 작성 등
       WorkOrders||--o{ProductionLogs:"has"
       WorkOrders||--o|Inspections:"has"
 
-    </div>
+    </pre>
 
 ### API 상세 정의
 
