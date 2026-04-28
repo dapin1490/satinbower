@@ -95,7 +95,7 @@ docker compose run --rm -e RUN_INIT=1 blog
 ## 머메이드 차트 작성
 
 ```html
-<div class="mermaid">
+<pre class="mermaid">
     flowchart ...
-</div>
+</pre>
 ```
