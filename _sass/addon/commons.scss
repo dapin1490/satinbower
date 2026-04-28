@@ -308,19 +308,32 @@ i {
 
 /* it will be created by Liquid */
 .table-wrapper {
-  overflow-x: auto;
+  overflow-x: hidden;
   margin-bottom: 1.5rem;
+  max-width: 100%;
 
   > table {
     min-width: 100%;
-    overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    table-layout: auto;
     border-spacing: 0;
+
+    th,
+    td {
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
 
     thead {
       border-bottom: solid 2px rgba(210, 215, 217, 0.75);
 
       th {
         @extend %table-cell;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
       }
     }
 
@@ -338,6 +351,9 @@ i {
 
         td {
           @extend %table-cell;
+          white-space: normal;
+          overflow-wrap: anywhere;
+          word-break: break-word;
         }
       }
     } /* tbody */
