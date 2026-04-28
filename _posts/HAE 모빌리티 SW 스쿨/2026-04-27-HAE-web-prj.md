@@ -167,8 +167,6 @@ UI/UX 스펙 정의, ADR 작성, AGENTS 문서 작성 등
 
     <div class="mermaid">
 
-    %%{init: { 'theme': 'redux-color', 'themeVariables': { 'lineColor': '#00aaaa', 'fontSize': '15px', 'background': '#000000' } } }%%
-
     erDiagram
       direction LR
       Products {
