@@ -94,8 +94,23 @@ docker compose run --rm -e RUN_INIT=1 blog
 
 ## 머메이드 차트 작성
 
+> 태그와 내용물에 들여쓰기가 들어가면 렌더링이 안된다. 들여쓰기 없이 제일 낮은 레벨에서 쓰기.
+> mermaid 코드 내의 위계 구분을 위한 들여쓰기는 가능
+
 ```html
 <pre class="mermaid">
-    flowchart ...
+
+---
+config:
+theme: default
+look: neo
+layout: elk
+
+---
+
+flowchart ...
+
+linkStyle default stroke:#1AAAC7
+
 </pre>
 ```
