@@ -1,5 +1,6 @@
 # custom
-.obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
 **tempignore**
 
 # Bundler cache
