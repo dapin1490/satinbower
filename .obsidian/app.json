@@ -1,0 +1,9 @@
+{
+  "strictLineBreaks": true,
+  "spellcheck": false,
+  "useTab": false,
+  "useMarkdownLinks": true,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "newLinkFormat": "relative"
+}
